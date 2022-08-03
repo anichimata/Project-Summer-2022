@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<title>System Design Round</title>
+<body>
+<script type ="text/javascript">
+
+function readTextFile() {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "http://localhost:8080/freeResponse");
+	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
+	rawFile.responseType = 'json';
+
+	rawFile.onload = function(){
+
+	var my_questions_json = rawFile.response;
+    console.log(my_questions_json);
+	var question_form = document.getElementById("qform");
+        while (question_form.hasChildNodes()) {
+            question_form.removeChild(question_form.lastChild);
+		}
+
+	for (i=0;i<my_questions_json.length;i++){
+		var my_q_type=my_questions_json[i].type;
+		var my_q_id=my_questions_json[i].id;
+		var my_q_name=my_questions_json[i].question;
+		const each_q_div = document.createElement("div");
+		each_q_div.id='div'+my_q_id;
+		const question = document.createElement("p");
+		const question_label = document.createTextNode(my_q_name);
+		question.appendChild(question_label);
+		each_q_div.appendChild(question);
+
+		if(my_q_type=='text'){				
+			var input = document.createElement("input");
+			input.type = my_q_name;
+			input.id = my_q_id;
+			each_q_div.appendChild(input);
+			// line break
+			each_q_div.appendChild(document.createElement("br"));
+			question_form.appendChild(each_q_div);
+		}
+
+		if(my_q_type=='radio'){				
+			var options=my_questions_json[i].options;
+			for(j=0;j<options.length;j++){
+				var input=document.createElement("input");
+				const input_label = document.createTextNode(my_questions_json[i].options[j]);
+
+				input.setAttribute('type', 'radio');
+				input.setAttribute('name', 'o' + my_q_id);
+
+				input.id=my_q_id+"-"+j;
+				input.label=my_questions_json[i].options[j];
+				input.name='o'+my_q_id;
+				each_q_div.appendChild(input_label);
+				each_q_div.appendChild(input);	
+			    each_q_div.appendChild(document.createElement("br"));
+				
+			}
+			question_form.appendChild(each_q_div);
+		}
+		if(my_q_type=='textarea'){				
+			var input = document.createElement("textarea");
+			input.type = my_q_name;
+			input.id = my_q_id;
+			
+			each_q_div.appendChild(input);
+			// line break
+			each_q_div.appendChild(document.createElement("br"));
+			question_form.appendChild(each_q_div);
+		}
+		
+              
+    }
+};
+    rawFile.send();
+
+
+}
+
+
+//usage:
+readTextFile();
+
+</script>
+<head>Interview</head>
+
+<h1>Welcome to the System Design round of the Interview</h1>
+
+<form id="qform">
+  <p>Q.1 What is your name?</p>
+  <input type="radio" id= "name1" name="q1" value="C">
+  <label for="name1">Correct</label><br>
+  <input type="radio" id= "name2" name="q1" value="W">
+  <label for="name2">Wrong</label><br>
+  <input type="radio" id= "name3" name="q1" value="W">
+  <label for="name3">Wrong</label>
+
+  <br>  
+
+  <p>Q.2 Where are you from?</p>
+  <input type="radio" id="place1" name="q2" value="W">
+  <label for="place1">Wrong</label><br>
+  <input type="radio" id="place2" name="q2" value="C">
+  <label for="place2">Correct</label><br>  
+  <input type="radio" id="place3" name="q2" value="W">
+  <label for="place3">Wrong</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+<button type="submit" form="form1" value="Submit">Submit</button>
+</body>
+</html>
