@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<title>Medium Round</title>
+<body style = "background-color: #d3f2da;">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-default" style = "background-color: #f2d5d3;">
+
+
+  <div class="container-fluid">
+    <div class="navbar-header" style = "color:#312E41;">
+      <a class="navbar-brand" href="#">Interview</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li><a href="#">Round One</a></li>
+      <li class="active" ><a href="#">Round Two</a></li>
+      <li><a href="#">Round Three</a></li>
+      <li><a href="#">Round Four</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script type ="text/javascript">
+
+
+function preventBack() { window.history.forward(); }  
+setTimeout("preventBack()", 0);  
+window.onunload = function () { null };  
+
+
+function submit() {
+console.log("Your answers have been recorded.");
+ var answers = "";
+
+for(i = 7; i <= 11; i++) {	
+var objectId=document.getElementsByName(i)[0].id;
+console.log(objectId);
+if(objectId.includes("-")){
+
+ var length=document.getElementsByName(i).length; 
+for(j=0;j<length;j++){
+ var element=document.getElementsByName(i)[j];
+console.log(element);
+if(element.checked){
+answers=answers+'@@'+element.value;
+}
+}
+}else{
+	answers=answers+'@@'+document.getElementsByName(i)[0].value;
+}
+	
+	}
+
+var rawFile = new XMLHttpRequest();
+var params="pAnswers="+answers;
+rawFile.open("POST", "http://localhost:8080/submitAnswers?pPage=2&pAnswers="+answers);
+	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
+	rawFile.responseType = 'json'    ;
+
+rawFile.send();
+
+rawFile.onload = function(){
+
+	var didDudePass = rawFile.response;
+if(didDudePass){
+console.log(didDudePass);
+window.location = "file:///Users/ani/Documents/Project/html%20pages/roundThree.html";
+}
+else {
+window.location = "file:///Users/ani/Documents/Project/html%20pages/fail.html";
+}
+console.log(didDudePass);
+};
+
+
+console.log(answers);
+}
+
+function readTextFile() {
+    var rawFile = new XMLHttpRequest();
+rawFile.open("GET", "http://localhost:8080/mediumQuestions");
+	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
+	rawFile.responseType = 'json'    ;
+
+	rawFile.onload = function(){
+
+	var my_questions_json = rawFile.response;
+    console.log(my_questions_json);
+	var question_form = document.getElementById("qform");
+        while (question_form.hasChildNodes()) {
+            question_form.removeChild(question_form.lastChild);
+		}
+
+	for (i=0;i<my_questions_json.length;i++){
+		var my_q_type=my_questions_json[i].type;
+		var my_q_id=my_questions_json[i].id;
+		var my_q_name=my_questions_json[i].question;
+		const each_q_div = document.createElement("div");
+		each_q_div.id='div'+my_q_id;
+		const question = document.createElement("p");
+		const question_label = document.createTextNode(my_q_name);
+		question.appendChild(question_label);
+		each_q_div.appendChild(question);
+
+		if(my_q_type=='text'){				
+			var input = document.createElement("input");
+			input.type = my_q_name;
+			input.id = my_q_id;
+			input.name=my_q_id;
+			each_q_div.appendChild(input);
+			// line break
+			each_q_div.appendChild(document.createElement("br"));
+			question_form.appendChild(each_q_div);
+		}
+
+		if(my_q_type=='radio'){				
+			var options=my_questions_json[i].options;
+			for(j=0;j<options.length;j++){
+				var input=document.createElement("input");
+				const input_label = document.createTextNode(my_questions_json[i].options[j]);
+
+				input.setAttribute('type', 'radio');
+				input.value= my_questions_json[i].options[j];
+
+				input.id=my_q_id+"-"+j;
+				input.label=my_questions_json[i].options[j];
+				input.name=my_q_id;
+				each_q_div.appendChild(input_label);
+				each_q_div.appendChild(input);	
+			    each_q_div.appendChild(document.createElement("br"));
+				
+			}
+			question_form.appendChild(each_q_div);
+		}
+		each_q_div.appendChild(document.createElement("br"));
+              
+    }
+};
+    rawFile.send();
+
+
+}
+
+
+//usage:
+readTextFile();
+
+</script>
+<div class="container-fluid">
+<h1>Welcome to the Medium Round of the Interview</h1>
+<div>
+<br>
+</div>
+<div class="row">
+
+        <div class="col-md-8" style = "padding-left: 30px;">
+
+<form id="qform">
+  <p>Q.1 What is your name?</p>
+  <input type="radio" id= "name1" name="q1" value="C">
+  <label for="name1">Correct</label><br>
+  <input type="radio" id= "name2" name="q1" value="W">
+  <label for="name2">Wrong</label><br>
+  <input type="radio" id= "name3" name="q1" value="W">
+  <label for="name3">Wrong</label>
+
+  <br>  
+
+  <p>Q.2 Where are you from?</p>
+  <input type="radio" id="place1" name="q2" value="W">
+  <label for="place1">Wrong</label><br>
+  <input type="radio" id="place2" name="q2" value="C">
+  <label for="place2">Correct</label><br>  
+  <input type="radio" id="place3" name="q2" value="W">
+  <label for="place3">Wrong</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+<button type="submit" form="form1" value="Submit" onclick="submit()">Submit</button>
+
+        </div>
+    </div>
+</div>
+<div>
+<br>
+</div>
+</body>
+</html>
