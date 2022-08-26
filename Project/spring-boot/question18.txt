@@ -1,0 +1,450 @@
+When you click on a link like that, an HTTP request is send to their server with the full URL, like http://bit.ly/duSk8wK (links to this question). They read the path part (here duSk8wK), which maps to their database. In the database, they find a description (sometimes), your name (sometimes) and the real URL. Then they issue a redirect, which is a HTTP 302 response and the target URL in the header.
+
+This direct redirect is important. If you were to use files or first load HTML and then redirect, the browser would add TinyUrl to the history, which is not what you want. Also, the site that is redirected to will see the referrer (the site that you originally come from) as being the site the TinyUrl link is on (i.e., twitter.com, your own site, wherever the link is). This is just as important, so that site owners can see where people are coming from. This too, would not work if a page gets loaded that redirects.
+
+PS: there are more types of redirect. HTTP 301 means: redirect permanent. If that would happen, the browser will not request the bit.ly or TinyUrl site anymore and those sites want to count the hits. That's why HTTP 302 is used, which is a temporary redirect. The browser will ask TinyUrl.com or bit.ly each time again, which makes it possible to count the hits for you (some tiny url services offer this).
+
+TinyURL is a URL shortening web service, which provides short aliases for redirection of long URLs. Kevin Gilbertson, a web developer, launched the service in January 2002 so he would be able to post links in newsgroup postings that frequently had long, cumbersome addresses.If you are a Shopify merchant, you can add the URL Short Link Generator app to your store to generate to convert your website’s long, boring URLs with short URLs.
+
+URL shortening websites like tinyurl and bitly work by taking a long URL and turning it into a much shorter one. This is done by using a redirect on the server side, which points the original URL to the shorter one. The specific process for each website may vary slightly, but generally speaking, that's how they work!These types of services can be helpful when you want to share a link that would otherwise be quite long and unwieldy. They can also be used to track clicks, which can be useful for things like marketing campaigns. Overall, they're pretty handy little tools!
+
+This URL (or web address) is 118 characters long, but Twitter limits posts to just 280 characters. That doesn't leave many characters to say something about the link! Luckily, there is an easy solution: URL shorteners.A URL shortener is an online service that gives you a new, very short URL that is easier to share. It's not just useful with Twitter, but also with email, text messages, and any other situation where a long URL is unmanageable.
+
+URL shortening services like bit.ly or TinyURL are very popular to generate shorter aliases for long URLs. You need to design this kind of web service where if a user gives a long URL then the service returns a short URL and if the user gives a short URL then it returns the original long URL. For example, shortening the given URL through TinyURL: 
+
+https://www.geeksforgeeks.org/get-your-dream-job-with-amazon-sde-test-series/?ref=leftbar-rightbar
+We get the result given below:
+
+https://tinyurl.com/y7vg2xjl
+A lot of candidates might be thinking that designing this service is not difficult. When a user gives a long URL converts it into a short URL and updates the database and when the user hits the short URL then search the short URL in the database, get that long URL, and redirect the user to the original URL. Is it really simple? Absolutely not if we think about the scalability of this service. 
+When you’re asked this question in your interviews don’t jump into the technical details immediately. Most of the candidates make mistakes here and immediately they start listing out some bunch of tools, databases, and frameworks. In this kind of question, the interviewer wants a high-level design idea where you can give the solution for the scalability and durability of the service. 
+Let’s start by talking about the requirement first… 
+
+1. Requirement
+Before you jump into the solution always clarify all the assumptions you’re making at the beginning of the interview. Ask questions to identify the scope of the system. This will clear the initial doubt, and you will get to know what specific detail the interviewer wants to consider in this service. 
+
+Given a long URL, the service should generate a shorter and unique alias for it.
+When the user hits a short link, the service should redirect to the original link.
+Links will expire after a standard default time span.
+The system should be highly available. This is really important to consider because if the service goes down, all the URL redirection will start failing.
+URL redirection should happen in real-time with minimal latency.
+Shortened links should not be predictable.
+Let’s start by making some assumptions about the traffic (for scalability) and the length of the URL. 
+
+2. Traffic
+Let’s assume our service has 30M new URL shortenings per month. Let’s assume we store every URL shortening request (and associated shortened link) for 5 years. For this period the service will generate about 1.8 B records. 
+
+30 million * 5 years * 12 months = 1.8B
+3. URL Length
+Let’s consider we are using 7 characters to generate a short URL. These characters are a combination of 62 characters [A-Z, a-z, 0-9] something like http://ad.com/abXdef2.
+
+4. Data Capacity Modeling
+Discuss the data capacity model to estimate the storage of the system. We need to understand how much data we might have to insert into our system. Think about the different columns or attributes that will be stored in our database and calculate the storage of data for five years. Let’s make the assumption given below for different attributes… 
+
+Consider the average long URL size of 2KB ie for 2048 characters.
+Short URL size: 17 Bytes for 17 character
+created_at- 7 bytes
+expiration_length_in_minutes -7 bytes
+The above calculation will give a total of 2.031KB per shortened URL entry in the database. If we calculate the total storage then for 30 M active users total size = 30000000 * 2.031 = 60780000 KB = 60.78 GB per month. In a Year of 0.7284 TB and in 5 years 3.642 TB of data. 
+
+We need to think about the reads and writes that will happen on our system for this amount of data. This will decide what kind of database (RDBMS or NoSQL) we need to use.
+
+5. URL Shortening Logic (Encoding)
+To convert a long URL into a unique short URL we can use some hashing techniques like Base62 or MD5. We will discuss both approaches. 
+Base62 Encoding: Base62 encoder allows us to use the combination of characters and numbers which contains A-Z, a-z, 0–9 total( 26 + 26 + 10 = 62). So for 7 characters short URL, we can serve 62^7 ~= 3500 billion URLs which is quite enough in comparison to base10 (base10 only contains numbers 0-9 so you will get only 10M combinations). If we use base62 making the assumption that the service is generating 1000 tiny URLs/sec then it will take 110 years to exhaust this 3500 billion combination. We can generate a random number for the given long URL and convert it to base62 and use the hash as a short URL id. 
+
+def to_base_62(deci):
+    s = '012345689abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    hash_str = ''
+    while deci > 0:
+       hash_str= s[deci % 62] + hash_str
+       deci /= 62
+    return hash_str
+ 
+print to_base_62(999)
+MD5 Encoding: MD5 also gives base62 output but the MD5 hash gives a lengthy output which is more than 7 characters. MD5 hash generates 128-bit long output so out of 128 bits we will take 43 bits to generate a tiny URL of 7 characters. MD5 can create a lot of collisions. For two or many different long URL inputs we may get the same unique id for a short URL and that could cause data corruption. So we need to perform some checks to ensure that this unique id doesn’t exist in the database already. 
+
+6. Database
+We can use RDBMS which uses ACID properties but you will be facing the scalability issue with relational databases. Now if you think you can use sharding and resolve the scalability issue in RDBMS then that will increase the complexity of the system. There are 30M active users so there will be conversions and a lot of Short URL resolution and redirections. Read and write will be heavy for these 30M users so scaling the RDBMS using shard will increase the complexity of the design when we want to have our system in a distributed manner. You may have to use consistent hashing to balance the traffics and DB queries in the case of RDBMS and which is a complicated process. So to handle this amount of huge traffic on our system relational databases are not fit and also it won’t be a good decision to scale the RDBMS. 
+Now let’s talk about NoSQL!
+
+The only problem with using the NoSQL database is its eventual consistency. We write something and it takes some time to replicate to a different node but our system needs high availability and NoSQL fits this requirement. NoSQL can easily handle the 30M of active users and it is easy to scale. We just need to keep adding the nodes when we want to expand the storage. 
+
+Techniques to Generate and Store TinyURL 
+Technique 1
+Let’s discuss the mapping of a long URL into a short URL in our database. Assume we generate the Tiny URL using base62 encoding then we need to perform the steps given below… 
+ 
+
+The tiny URL should be unique so firstly check the existence of this tiny URL in the database (doing get(tiny) on DB). If it’s already present there for some other long URL then generate a new short URL.
+If the short URL isn’t present in DB then put the long URL and TinyURL in DB (put(TinyURL, long URL)).
+This technique works with one server very well but if there will be multiple servers then this technique will create a race condition. When multiple servers will work together, there will be a possibility that they all can generate the same unique id or same tiny URL for different long URLs, and even after checking the database, they will be allowed to insert the same tiny URLs simultaneously (which is the same for different long URLs) in the database and this may end up corrupting the data. 
+We can use putIfAbsent(TinyURL, long URL) or INSERT-IF-NOT-EXIST condition while inserting the tiny URL but this requires support from DB which is available in RDBMS but not in NoSQL. Data is eventual consistent in NoSQL so putIfAbsent feature support might not be available in the NoSQL database. 
+
+Technique 2 (MD5 Approach)
+Encode the long URL using the MD5 approach and take only the first 7 chars to generate TinyURL.
+The first 7 characters could be the same for different long URLs so check the DB (as we have discussed in technique 1) to verify that TinyURL is not used already
+Advantages: This approach saves some space in the database but how? If two users want to generate a tiny URL for the same long URL then the first technique will generate two random numbers and it requires two rows in the database but in the second technique, both the longer URL will have the same MD5 so it will have the same first 43 bits which means we will get some deduping and we will end up with saving some space since we only need to store one row instead of two rows in the database.
+MD5 saves some space in the database for the same URLs but for two long different URLs again we will face the same problem as we have discussed in technique 1. We can use putIfAbsent but NoSQL doesn’t support this feature. So let’s move to the third technique to solve this problem.
+
+Technique 3 (Counter Approach)
+Using a counter is a good decision for a scalable solution because counters always get incremented so we can get a new value for every new request. 
+
+Single server approach:  
+
+A single host or server (say database) will be responsible for maintaining the counter.
+When the worker host receives a request it talks to the counter host, which returns a unique number and increments the counter. When the next request comes the counter host again returns the unique number and this goes on.
+Every worker host gets a unique number which is used to generate TinyURL.
+Problem: If the counter host goes down for some time then it will create a problem, also if the number of requests will be high then the counter host might not be able to handle the load. So challenges are a Single point of failure and a single point of bottleneck. 
+And what if there are multiple servers? 
+
+You can’t maintain a single counter and returns the output to all the servers. To solve this problem we can use multiple internal counters for multiple servers which use different counter ranges. For example server 1 ranges from 1 to 1M, server 2 ranges from 1M to 10M, and so on. But again we will face a problem i.e. if one of the counters goes down then for another server it will be difficult to get the range of the failure counter and maintain it again. Also if one counter reaches its maximum limit then resetting the counter will be difficult because there is no single host available for coordination among all these multiple servers. The architecture will be messed up since we don’t know which server is the master or which one is a slave and which one is responsible for coordination and synchronization. 
+
+Solution: To solve this problem we can use a distributed service Zookeeper to manage all these tedious tasks and to solve the various challenges of a distributed system like a race condition, deadlock, or particle failure of data. Zookeeper is basically a distributed coordination service that manages a large set of hosts. It keeps track of all the things such as the naming of the servers, active servers, dead servers, and configuration information of all the hosts. It provides coordination and maintains the synchronization between the multiple servers. 
+Let’s discuss how to maintain a counter for distributed hosts using Zookeeper. 
+ 
+
+Zookeeper-High-Level-Architecture
+
+From 3.5 trillion combinations take 1st billion combinations.
+In Zookeeper maintain the range and divide the 1st billion into 1000 ranges of 1 million each i.e. range 1->(1 – 1,000,000), range 2->(1,000,001 – 2,000,000)…. range 1000->(999,000,001 – 1,000,000,000)
+When servers will be added these servers will ask for the unused range from Zookeepers. Suppose the W1 server is assigned range 1, now W1 will generate the tiny URL incrementing the counter and using the encoding technique. Every time it will be a unique number so there is no possibility of collision and also there is no need to keep checking the DB to ensure that the URL already exists or not. We can directly insert the mapping of a long URL and short URL into the DB.
+In the worst case, if one of the servers goes down then we will only lose a million combinations in Zookeeper (which will be unused and we can’t reuse it as well) but since we have 3.5 trillion combinations we should not worry about losing this combination.
+If one of the servers will reach its maximum range or limit then again it can take a new fresh range from Zookeeper.
+The addition of a new server is also easy. Zookeeper will assign an unused counter range to this new server.
+We will take the 2nd billion when the 1st billion is exhausted to continue the process.
+URL shortening is used to create shorter aliases for long URLs. We call these shortened aliases “short links.” Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs.
+
+For example, if we shorten the following URL through TinyURL:
+
+https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR
+
+We would get:
+
+https://tinyurl.com/rxcsyr3r
+
+The shortened URL is nearly one-third the size of the actual URL.
+
+URL shortening is used to optimize links across devices, track individual links to analyze audience, measure ad campaigns’ performance, or hide affiliated original URLs.
+
+If you haven’t used tinyurl.com before, please try creating a new shortened URL and spend some time going through the various options their service offers. This will help you a lot in understanding this chapter.
+
+2. Requirements and Goals of the System#
+You should always clarify requirements at the beginning of the interview. Be sure to ask questions to find the exact scope of the system that the interviewer has in mind.
+
+Our URL shortening system should meet the following requirements:
+
+Functional Requirements:
+
+Given a URL, our service should generate a shorter and unique alias of it. This is called a short link. This link should be short enough to be easily copied and pasted into applications.
+When users access a short link, our service should redirect them to the original link.
+Users should optionally be able to pick a custom short link for their URL.
+Links will expire after a standard default timespan. Users should be able to specify the expiration time.
+Non-Functional Requirements:
+
+The system should be highly available. This is required because, if our service is down, all the URL redirections will start failing.
+URL redirection should happen in real-time with minimal latency.
+Shortened links should not be guessable (not predictable).
+Extended Requirements:
+
+Analytics; e.g., how many times a redirection happened?
+Our service should also be accessible through REST APIs by other services.
+We can compute a unique hash (e.g., MD5 or SHA256, etc.) of the given URL. The hash can then be encoded for display. This encoding could be base36 ([a-z ,0-9]) or base62 ([A-Z, a-z, 0-9]) and if we add ‘+’ and ‘/’ we can use Base64 encoding. A reasonable question would be, what should be the length of the short key? 6, 8, or 10 characters?
+
+Using base64 encoding, a 6 letters long key would result in 64^6 = ~68.7 billion possible strings.
+Using base64 encoding, an 8 letters long key would result in 64^8 = ~281 trillion possible strings.
+
+With 68.7B unique strings, let’s assume six letter keys would suffice for our system.
+
+If we use the MD5 algorithm as our hash function, it will produce a 128-bit hash value. After base64 encoding, we’ll get a string having more than 21 characters (since each base64 character encodes 6 bits of the hash value). Now we only have space for 6 (or 8) characters per short key; how will we choose our key then? We can take the first 6 (or 8) letters for the key. This could result in key duplication; to resolve that, we can choose some other characters out of the encoding string or swap some characters.
+
+What are the different issues with our solution? We have the following couple of problems with our encoding scheme:
+
+If multiple users enter the same URL, they can get the same shortened URL, which is not acceptable.
+What if parts of the URL are URL-encoded? e.g., http://www.educative.io/distributed.php?id=design, and http://www.educative.io/distributed.php%3Fid%3Ddesign are identical except for the URL encoding.
+Workaround for the issues: We can append an increasing sequence number to each input URL to make it unique and then generate its hash. We don’t need to store this sequence number in the databases, though. Possible problems with this approach could be an ever-increasing sequence number. Can it overflow? Appending an increasing sequence number will also impact the performance of the service.
+
+Another solution could be to append the user id (which should be unique) to the input URL. However, if the user has not signed in, we would have to ask the user to choose a uniqueness key. Even after this, if we have a conflict, we have to keep generating a key until we get a unique one.
+In a simple design, the user will be talking to a single application server in our service. That application server will be storing the mapping between the short URLs and the big URLs in the database locally. However, this design has several flaws. It is not scalable as a single server cannot handle 10s to 100s of thousands of requests per sec. Also, neither the design is fault-tolerant, nor the service is highly available. This single server can go down at any time when some failure happens. It can also go down for periodic maintenance, thus affecting the availability of the service. 
+
+
+A simple architecture
+ 
+
+Simultaneously, since the data is stored in the same single server's hard drive, the design does not enforce data durability. The hard drive crash can cause instant data loss at any time.
+Obviously, even though the design can fully serve the functional requirements, it cannot meet the non-functional requirements. This clearly shows that the non-functional requirements are an important factor in dictating the design of a service.
+
+Now consider the following design:
+
+
+A preferable architecture
+ 
+ Here, we have a minimum of three application servers that serve the users' read/write requests. The users talk to the app servers via a load balancer. The load balancer distributes the read/write requests among the servers equally in a round-robin fashion. We are using a minimum of three application servers. Reason being that using two app servers is not enough to ensure that the service remains highly available at all times. It is possible that one server could be down for some time, for some periodic maintenance (e.g., host OS patching or deployment of new service builds). During that time, there is always a possibility of the single working server getting a failure, thus causing service unavailability. This is the reason we use at least three app servers. The periodic maintenance is done on one server at a time to avoid the possibility of a situation where only a single server is serving the read/write requests. 
+
+This design is also highly scalable. We will be monitoring each server. As the resource consumption in each server crosses above some threshold (e.g., 80% of CPU usage or the number of read/write requests per second cross 10K requests per server), we can add more servers and configure the load balancer to send requests to the new servers as well. Also, if the resource consumption goes below a certain threshold (e.g., less than 30% of CPU and/or the number of requests below 1K requests per second), we can remove servers to minimize the cost. Similarly, if a server dies, we can remove it from the load balancer as well. 
+
+The load balancer can also use different mechanisms other than round-robin to decide which server to forward the request to. This we will discuss later in future chapters.
+
+Datastore:
+By introducing at least three app servers, we have tried to ensure that the service's design is highly available and scalable. However, the overall service design cannot be highly available, scalable, and durable if the datastore used is not highly available, scalable, and durable. The data store needs to exhibit these properties for the overall service to exhibit these properties. We will discuss the design of the datastore in a future chapter in detail. 
+
+In-Memory Cache:
+The number of read requests would be much higher than the number of write requests. Initially, we can safely assume that the number of reads is at least 10x the number of writes. Since we also have an analytics and monitoring component to measure the number of read/write requests, we can determine the correct ratio between read and write requests. However, it is for sure that the number of reads will be much higher than the number of writes. So, we can introduce an in-memory cache to store the mapping between the short and big URLs to reduce requests hitting the datastore for reading. 
+
+Now there are two approaches to use an in-memory cache. The first approach is that each app server has its own local in-memory cache and the second approach is to use a global in-memory cache. The advantage of the first approach is that accessing a local in-memory cache has way less latency than accessing a global cache (which would be maintained in separate cache servers). If the number of app servers is less than 5, then it would be better to have a local in-memory cache because we would be hitting the datastore only at most 5 times for each short URL (one from each server). Afterward, all the read requests can be returned directly from the local in-memory cache. However, as the number of app servers is increased to a substantial number, having only the local in-memory cache will cause the read request to hit the datastore more often (up to the number of app servers) for each short URL mapping. In this case, we could introduce a global in-memory cache (e.g., Memcache, etc.). Whether it is a local or global in-memory cache, it could use the least recently used (LRU) as an eviction policy when the cache has reached its maximum size.
+
+
+
+Detailed Design
+Key/Short URL Generation:
+The first thing we will discuss is how the short URL will be encoded. We have different encoding mechanisms that we can use.
+
+URL shortening is used to create shorter aliases for long URLs. We call these shortened aliases “short links.” Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs.
+
+For example, if we shorten the following URL through TinyURL:
+The shortened URL is nearly one-third the size of the actual URL.
+
+URL shortening is used to optimize links across devices, track individual links to analyze audience, measure ad campaigns’ performance, or hide affiliated original URLs.
+
+If you haven’t used tinyurl.com before, please try creating a new shortened URL and spend some time going through the various options their service offers. This will help you a lot in understanding this chapter.
+Our URL shortening system should meet the following requirements:
+
+Functional Requirements:
+
+Given a URL, our service should generate a shorter and unique alias of it. This is called a short link. This link should be short enough to be easily copied and pasted into applications.
+When users access a short link, our service should redirect them to the original link.
+Users should optionally be able to pick a custom short link for their URL.
+Links will expire after a standard default timespan. Users should be able to specify the expiration time.
+Non-Functional Requirements:
+
+The system should be highly available. This is required because, if our service is down, all the URL redirections will start failing.
+URL redirection should happen in real-time with minimal latency.
+Shortened links should not be guessable (not predictable).
+Extended Requirements:
+
+Analytics; e.g., how many times a redirection happened?
+Our service should also be accessible through REST APIs by other services.
+3. Capacity Estimation and Constraints#
+Our system will be read-heavy. There will be lots of redirection requests compared to new URL shortenings. Let’s assume a 100:1 ratio between read and write.
+
+Traffic estimates: Assuming, we will have 500M new URL shortenings per month, with 100:1 read/write ratio, we can expect 50B redirections during the same period:
+
+100 * 500M => 50B
+What would be Queries Per Second (QPS) for our system? New URLs shortenings per second:
+
+500 million / (30 days * 24 hours * 3600 seconds) = ~200 URLs/s
+Considering 100:1 read/write ratio, URLs redirections per second will be:
+
+100 * 200 URLs/s = 20K/s
+Storage estimates: Let’s assume we store every URL shortening request (and associated shortened link) for 5 years. Since we expect to have 500M new URLs every month, the total number of objects we expect to store will be 30 billion:
+
+500 million * 5 years * 12 months = 30 billion
+Let’s assume that each stored object will be approximately 500 bytes (just a ballpark estimate–we will dig into it later). We will need 15TB of total storage:
+
+30 billion * 500 bytes = 15 TB
+In the following table, we can change our assumptions to see how the estimates change:
+Bandwidth estimates: For write requests, since we expect 200 new URLs every second, total incoming data for our service will be 100KB per second:
+
+200 * 500 bytes = 100 KB/s
+For read requests, since every second we expect ~20K URLs redirections, total outgoing data for our service would be 10MB per second:
+
+20K * 500 bytes = ~10 MB/s
+Memory estimates: If we want to cache some of the hot URLs that are frequently accessed, how much memory will we need to store them? If we follow the 80-20 rule, meaning 20% of URLs generate 80% of traffic, we would like to cache these 20% hot URLs.
+
+Since we have 20K requests per second, we will be getting 1.7 billion requests per day:
+
+20K * 3600 seconds * 24 hours = ~1.7 billion
+To cache 20% of these requests, we will need 170GB of memory.
+
+0.2 * 1.7 billion * 500 bytes = ~170GB
+One thing to note here is that since there will be many duplicate requests (of the same URL), our actual memory usage will be less than 170GB.
+
+High-level estimates: Assuming 500 million new URLs per month and 100:1 read:write ratio, following is the summary of the high level estimates for our service:
+he problem we are solving here is how to generate a short and unique key for a given URL.
+
+In the TinyURL example in Section 1, the shortened URL is “https://tinyurl.com/rxcsyr3r”. The last eight characters of this URL constitute the short key we want to generate. We’ll explore two solutions here:
+
+a. Encoding actual URL#
+We can compute a unique hash (e.g., MD5 or SHA256, etc.) of the given URL. The hash can then be encoded for display. This encoding could be base36 ([a-z ,0-9]) or base62 ([A-Z, a-z, 0-9]) and if we add ‘+’ and ‘/’ we can use Base64 encoding. A reasonable question would be, what should be the length of the short key? 6, 8, or 10 characters?
+
+Using base64 encoding, a 6 letters long key would result in 64^6 = ~68.7 billion possible strings.
+Using base64 encoding, an 8 letters long key would result in 64^8 = ~281 trillion possible strings.
+
+With 68.7B unique strings, let’s assume six letter keys would suffice for our system.
+
+If we use the MD5 algorithm as our hash function, it will produce a 128-bit hash value. After base64 encoding, we’ll get a string having more than 21 characters (since each base64 character encodes 6 bits of the hash value). Now we only have space for 6 (or 8) characters per short key; how will we choose our key then? We can take the first 6 (or 8) letters for the key. This could result in key duplication; to resolve that, we can choose some other characters out of the encoding string or swap some characters.
+
+What are the different issues with our solution? We have the following couple of problems with our encoding scheme:
+
+If multiple users enter the same URL, they can get the same shortened URL, which is not acceptable.
+What if parts of the URL are URL-encoded? e.g., http://www.educative.io/distributed.php?id=design, and http://www.educative.io/distributed.php%3Fid%3Ddesign are identical except for the URL encoding.
+Workaround for the issues: We can append an increasing sequence number to each input URL to make it unique and then generate its hash. We don’t need to store this sequence number in the databases, though. Possible problems with this approach could be an ever-increasing sequence number. Can it overflow? Appending an increasing sequence number will also impact the performance of the service.
+
+Another solution could be to append the user id (which should be unique) to the input URL. However, if the user has not signed in, we would have to ask the user to choose a uniqueness key. Even after this, if we have a conflict, we have to keep generating a key until we get a unique one.
+We can have a standalone Key Generation Service (KGS) that generates random six-letter strings beforehand and stores them in a database (let’s call it key-DB). Whenever we want to shorten a URL, we will take one of the already-generated keys and use it. This approach will make things quite simple and fast. Not only are we not encoding the URL, but we won’t have to worry about duplications or collisions. KGS will make sure all the keys inserted into key-DB are unique
+
+Can concurrency cause problems? As soon as a key is used, it should be marked in the database to ensure that it is not used again. If there are multiple servers reading keys concurrently, we might get a scenario where two or more servers try to read the same key from the database. How can we solve this concurrency problem?
+
+Servers can use KGS to read/mark keys in the database. KGS can use two tables to store keys: one for keys that are not used yet, and one for all the used keys. As soon as KGS gives keys to one of the servers, it can move them to the used keys table. KGS can always keep some keys in memory to quickly provide them whenever a server needs them.
+
+For simplicity, as soon as KGS loads some keys in memory, it can move them to the used keys table. This ensures each server gets unique keys. If KGS dies before assigning all the loaded keys to some server, we will be wasting those keys–which could be acceptable, given the huge number of keys we have.
+
+KGS also has to make sure not to give the same key to multiple servers. For that, it must synchronize (or get a lock on) the data structure holding the keys before removing keys from it and giving them to a server.
+
+What would be the key-DB size? With base64 encoding, we can generate 68.7B unique six letters keys. If we need one byte to store one alpha-numeric character, we can store all these keys in:
+
+6 (characters per key) * 68.7B (unique keys) = 412 GB.
+Isn’t KGS a single point of failure? Yes, it is. To solve this, we can have a standby replica of KGS. Whenever the primary server dies, the standby server can take over to generate and provide keys.
+
+Can each app server cache some keys from key-DB? Yes, this can surely speed things up. Although, in this case, if the application server dies before consuming all the keys, we will end up losing those keys. This can be acceptable since we have 68B unique six-letter keys.
+
+How would we perform a key lookup? We can look up the key in our database to get the full URL. If it’s present in the DB, issue an “HTTP 302 Redirect” status back to the browser, passing the stored URL in the “Location” field of the request. If that key is not present in our system, issue an “HTTP 404 Not Found” status or redirect the user back to the homepage.
+
+Should we impose size limits on custom aliases? Our service supports custom aliases. Users can pick any ‘key’ they like, but providing a custom alias is not mandatory. However, it is reasonable (and often desirable) to impose a size limit on a custom alias to ensure we have a consistent URL database. Let’s assume users can specify a maximum of 16 characters per customer key (as reflected in the above database schema).
+To scale out our DB, we need to partition it so that it can store information about billions of URLs. Therefore, we need to develop a partitioning scheme that would divide and store our data into different DB servers.
+
+a. Range Based Partitioning: We can store URLs in separate partitions based on the hash key’s first letter. Hence we will save all the URL hash keys starting with the letter ‘A’ (and ‘a’) in one partition, save those that start with the letter ‘B’ in another partition, and so on. This approach is called range-based partitioning. We can even combine certain less frequently occurring letters into one database partition. Thus, we should develop a static partitioning scheme to always store/find a URL in a predictable manner.
+
+The main problem with this approach is that it can lead to unbalanced DB servers. For example, we decide to put all URLs starting with the letter ‘E’ into a DB partition, but later we realize that we have too many URLs that start with the letter ‘E.’
+
+b. Hash-Based Partitioning: In this scheme, we take a hash of the object we are storing. We then calculate which partition to use based upon the hash. In our case, we can take the hash of the ‘key’ or the short link to determine the partition in which we store the data object.
+
+Our hashing function will randomly distribute URLs into different partitions (e.g., our hashing function can always map any ‘key’ to a number between [1…256]). This number would represent the partition in which we store our object.
+
+This approach can still lead to overloaded partitions, which can be solved using Consistent Hashing.
+
+8. Cache#
+We can cache URLs that are frequently accessed. We can use any off-the-shelf solution like Memcached, which can store full URLs with their respective hashes. Thus, the application servers, before hitting the backend storage, can quickly check if the cache has the desired URL.
+
+How much cache memory should we have? We can start with 20% of daily traffic and, based on clients’ usage patterns, we can adjust how many cache servers we need. As estimated above, we need 170GB of memory to cache 20% of daily traffic. Since a modern-day server can have 256GB of memory, we can easily fit all the cache into one machine. Alternatively, we can use a couple of smaller servers to store all these hot URLs.
+
+Which cache eviction policy would best fit our needs? When the cache is full, and we want to replace a link with a newer/hotter URL, how would we choose? Least Recently Used (LRU) can be a reasonable policy for our system. Under this policy, we discard the least recently used URL first. We can use a Linked Hash Map or a similar data structure to store our URLs and Hashes, which will also keep track of the URLs that have been accessed recently.
+
+To further increase the efficiency, we can replicate our caching servers to distribute the load between them.
+
+How can each cache replica be updated? Whenever there is a cache miss, our servers would be hitting a backend database. Whenever this happens, we can update the cache and pass the new entry to all the cache replicas. Each replica can update its cache by adding the new entry. If a replica already has that entry, it can simply ignore it.
+We can add a Load balancing layer at three places in our system:
+
+Between Clients and Application servers
+Between Application Servers and database servers
+Between Application Servers and Cache servers
+Initially, we could use a simple Round Robin approach that distributes incoming requests equally among backend servers. This LB is simple to implement and does not introduce any overhead. Another benefit of this approach is that if a server is dead, LB will take it out of the rotation and stop sending any traffic to it.
+
+A problem with Round Robin LB is that we do not consider the server load. As a result, if a server is overloaded or slow, the LB will not stop sending new requests to that server. To handle this, a more intelligent LB solution can be placed that periodically queries the backend server about its load and adjusts traffic based on that.
+hould entries stick around forever, or should they be purged? If a user-specified expiration time is reached, what should happen to the link?
+
+If we chose to continuously search for expired links to remove them, it would put a lot of pressure on our database. Instead, we can slowly remove expired links and do a lazy cleanup. Our service will ensure that only expired links will be deleted, although some expired links can live longer but will never be returned to users.
+
+Whenever a user tries to access an expired link, we can delete the link and return an error to the user.
+A separate Cleanup service can run periodically to remove expired links from our storage and cache. This service should be very lightweight and scheduled to run only when the user traffic is expected to be low.
+We can have a default expiration time for each link (e.g., two years).
+After removing an expired link, we can put the key back in the key-DB to be reused.
+Should we remove links that haven’t been visited in some length of time, say six months? This could be tricky. Since storage is getting cheap, we can decide to keep links forever.
+How many times a short URL has been used, what were user locations, etc.? How would we store these statistics? If it is part of a DB row that gets updated on each view, what will happen when a popular URL is slammed with a large number of concurrent requests?
+
+Some statistics worth tracking: country of the visitor, date and time of access, web page that referred the click, browser, or platform from where the page was accessed.
+Can users create private URLs or allow a particular set of users to access a URL?
+
+We can store the permission level (public/private) with each URL in the database. We can also create a separate table to store UserIDs that have permission to see a specific URL. If a user does not have permission and tries to access a URL, we can send an error (HTTP 401) back. Given that we are storing our data in a NoSQL wide-column database like Cassandra, the key for the table storing permissions would be the ‘Hash’ (or the KGS generated ‘key’). The columns will store the UserIDs of those users that have permission to see the URL.
+Basically, when the URL shortener gives you your shortened URL, it "remembers" the full address. When other users go to the shortened URL, they will be automatically redirected to the full address.
+
+The webpage will still exist at the longer URL—the shortened URL is simply a shortcut to make the link easier to manage.\
+Each website has a web address called a universal resource locator or URL. This textual address that people use to type in or communicate is then
+Converted by computers into an internet protocol or IP address
+Once it is converted, computer networks direct users to the correct website
+The problem with URLs is that they are long, like, really long. Not only are URLs long, but they often involve many strange combinations of characters and numbers that have nothing to do with the website or the content. These combinations are in no recognizable order to the humans that are using the computer system. When humans cannot detect a pattern, it is difficult for them to remember a sequence, like a long website, for example, or a phone number or an address. Being unable to remember a website seems unimportant, but it affects profits for businesses. To combat this problem, the original TinyURL was created in 2002.
+In a simple design, the user will be talking to a single application server in our service. That application server will be storing the mapping between the short URLs and the big URLs in the database locally. However, this design has several flaws. It is not scalable as a single server cannot handle 10s to 100s of thousands of requests per sec. Also, neither the design is fault-tolerant, nor the service is highly available. This single server can go down at any time when some failure happens. It can also go down for periodic maintenance, thus affecting the availability of the service. 
+Here, we have a minimum of three application servers that serve the users' read/write requests. The users talk to the app servers via a load balancer. The load balancer distributes the read/write requests among the servers equally in a round-robin fashion. We are using a minimum of three application servers. Reason being that using two app servers is not enough to ensure that the service remains highly available at all times. It is possible that one server could be down for some time, for some periodic maintenance (e.g., host OS patching or deployment of new service builds). During that time, there is always a possibility of the single working server getting a failure, thus causing service unavailability. This is the reason we use at least three app servers. The periodic maintenance is done on one server at a time to avoid the possibility of a situation where only a single server is serving the read/write requests. 
+
+This design is also highly scalable. We will be monitoring each server. As the resource consumption in each server crosses above some threshold (e.g., 80% of CPU usage or the number of read/write requests per second cross 10K requests per server), we can add more servers and configure the load balancer to send requests to the new servers as well. Also, if the resource consumption goes below a certain threshold (e.g., less than 30% of CPU and/or the number of requests below 1K requests per second), we can remove servers to minimize the cost. Similarly, if a server dies, we can remove it from the load balancer as well. 
+
+The load balancer can also use different mechanisms other than round-robin to decide which server to forward the request to. This we will discuss later in future chapters.
+The number of read requests would be much higher than the number of write requests. Initially, we can safely assume that the number of reads is at least 10x the number of writes. Since we also have an analytics and monitoring component to measure the number of read/write requests, we can determine the correct ratio between read and write requests. However, it is for sure that the number of reads will be much higher than the number of writes. So, we can introduce an in-memory cache to store the mapping between the short and big URLs to reduce requests hitting the datastore for reading. 
+
+Now there are two approaches to use an in-memory cache. The first approach is that each app server has its own local in-memory cache and the second approach is to use a global in-memory cache. The advantage of the first approach is that accessing a local in-memory cache has way less latency than accessing a global cache (which would be maintained in separate cache servers). If the number of app servers is less than 5, then it would be better to have a local in-memory cache because we would be hitting the datastore only at most 5 times for each short URL (one from each server). Afterward, all the read requests can be returned directly from the local in-memory cache. However, as the number of app servers is increased to a substantial number, having only the local in-memory cache will cause the read request to hit the datastore more often (up to the number of app servers) for each short URL mapping. In this case, we could introduce a global in-memory cache (e.g., Memcache, etc.). Whether it is a local or global in-memory cache, it could use the least recently used (LRU) as an eviction policy when the cache has reached its maximum size.
+Then some other online resources have suggested using a key-generation service (KGS), which generates unique short URLs and returns them to the app servers. However, this just moves the design complexity of generating a unique short URL to a different service. Then, we need to discuss how this KGS is designed and whether KGS comprises a single server or more. If a single server, this breaks our non-functional requirements around availability, scalability, durability, etc. If KGS has more than one server, it adds lots of complexity to KGS service's design that how the KGS service will be generating unique keys and passing them to the app server when several app servers contact KGS service. Whether all the requests, from different app servers, go to a single server in KGS service (which means that the single server becomes a bottleneck for the service) or goes to multiple servers in KGS service (if that is the case, then how different KGS servers coordinate to only provide unique short URLs to different app servers). It also adds an extra dependency on a different service in our design, and this different service (i.e., KGS) is needed to be maintained as well.
+
+In short, we do not need to rely on a zookeeper or a separate key generation service. We can generate unique short URLs as follows. In our data store, we are storing a counter key-value. Now when an app-server comes up, it will go to the datastore and read and increment this counter value in a database transaction by some increment value. The increment value could be passed to the server as a starting configuration and could be 10, 100, or 1000. Let us take 100 as an example increment value right now. Now when after reading and incrementing the counter by 100 when the app server commits the transaction successfully, then it can safely assume that it can use all the counter values starting from the read value up to read value plus 99 for generating short URLs.
+There are two types of databases that we could use for our datastore, either a relational database or a NoSQL database. However, as we have discussed before that the non-functional requirements dictate that the datastore needs to be highly available, scalable, performant, and durable. Also, the database schema required for our service does not have any relations requiring relational databases. Thus, a NoSQL database seems to be the best choice for the datastore. The relational databases are usually not that highly available and performant and only support vertical scaling. The following will be two tables (sometimes called buckets in several databases) that we need.
+
+
+We have already discussed in some detail about whether to use a local cache or a global cache to minimize load on our datastore. Here for completion, we would like to discuss one scenario where we will prefer a global cache over a local cache. Consider the case where you start receiving a large number of requests for some short URL that has not yet been created. It could be because of a malicious user trying to perform a denial of service (DOS) attack. So, you will not find that URL in your in-memory cache, and then you will go to datastore for every request for such a short URL. This will cause unnecessary stress on your datastore. To avoid this stress, you could store a sentinel value in the in-memory cache for that short URL, informing that this short URL does not yet have any big URL mapping. And so instead of going to the datastore, you can return "not found" after checking your in-memory cache if you see that sentinel value. However, this now requires you to remove this sentinel value from the cache if that short URL is used in creating a URL mapping. This removal is only possible in the case of a global cache where the create request could come to any server, and that server can invalidate (or remove) the sentinel value from the global cache. If we would have used a local in-memory cache, then we cannot use the sentinel value in the local in-memory cache. The reason being if the same short URL is now used to create a short URL to big URL mapping, then we need to invalidate this short URL entry in the local in-memory cache. Since the local in-memory cache is local to each app server, the app server that receives the write request cannot go and invalidate the in-memory local cache of all the other app servers. This will cause a consistency problem in our service if the read request now goes to an app server, which has this sentinel value stored in its local in-memory cache, suggesting that the short URL mapping is not present. This app server will return "big URL not found", which would be an incorrect response. We have another choice to use both the local and global cache but store the sentinel values only in the global cache.
+URL shortening service or a webservice is used to create shorter/terse aliases for long URLs. We call these shortened aliases as “short links.” Users are redirected to the original URL when they hit these short links.
+
+Short links save a lot of space when displayed, messaged, printed or tweeted or for any other purpose.
+
+Additionally, users are less likely to mistype shorter URLs and thereby avoiding lot of 404’s.
+
+For example, if we shorten the below page through TinyURL:
+Our URL shortening system should meet the following functional requirements.
+
+Given a URL, the service should generate a shorter and unique URL from it. This is called a short link.
+When users access a short link, the service should redirect them to the original link.
+Links can expire after a standard default expiry timespan. Users may optionally be able to specify expiry time.
+Users can optionally be able to create a custom short link for their URL (Note: The custom short link should be unique).
+Our URL shortening service should also adhere to the below NFR’s.
+
+URL redirection should happen with minimal latency.
+The system should be highly available. If the service is down, all the URL redirections will fail.
+URL redirection should happen in real time.
+URL shortening services like bit.ly or TinyURL are very popular to generate shorter aliases for long URLs. You need to design this kind of web service where if a user gives a long URL then the service returns a short URL and if the user gives a short URL then it returns the original long URL. For example, shortening the given URL through TinyURL: 
+To convert a long URL into a unique short URL we can use some hashing techniques like Base62 or MD5. We will discuss both approaches. 
+Base62 Encoding: Base62 encoder allows us to use the combination of characters and numbers which contains A-Z, a-z, 0–9 total( 26 + 26 + 10 = 62). So for 7 characters short URL, we can serve 62^7 ~= 3500 billion URLs which is quite enough in comparison to base10 (base10 only contains numbers 0-9 so you will get only 10M combinations). If we use base62 making the assumption that the service is generating 1000 tiny URLs/sec then it will take 110 years to exhaust this 3500 billion combination. We can generate a random number for the given long URL and convert it to base62 and use the hash as a short URL id. 
+MD5 Encoding: MD5 also gives base62 output but the MD5 hash gives a lengthy output which is more than 7 characters. MD5 hash generates 128-bit long output so out of 128 bits we will take 43 bits to generate a tiny URL of 7 characters. MD5 can create a lot of collisions. For two or many different long URL inputs we may get the same unique id for a short URL and that could cause data corruption. So we need to perform some checks to ensure that this unique id doesn’t exist in the database already. 
+
+6. Database
+We can use RDBMS which uses ACID properties but you will be facing the scalability issue with relational databases. Now if you think you can use sharding and resolve the scalability issue in RDBMS then that will increase the complexity of the system. There are 30M active users so there will be conversions and a lot of Short URL resolution and redirections. Read and write will be heavy for these 30M users so scaling the RDBMS using shard will increase the complexity of the design when we want to have our system in a distributed manner. You may have to use consistent hashing to balance the traffics and DB queries in the case of RDBMS and which is a complicated process. So to handle this amount of huge traffic on our system relational databases are not fit and also it won’t be a good decision to scale the RDBMS. 
+Now let’s talk about NoSQL!
+
+The only problem with using the NoSQL database is its eventual consistency. We write something and it takes some time to replicate to a different node but our system needs high availability and NoSQL fits this requirement. NoSQL can easily handle the 30M of active users and it is easy to scale. We just need to keep adding the nodes when we want to expand the storage. 
+
+Techniques to Generate and Store TinyURL 
+Technique 1
+Let’s discuss the mapping of a long URL into a short URL in our database. Assume we generate the Tiny URL using base62 encoding then we need to perform the steps given below… 
+ 
+
+The tiny URL should be unique so firstly check the existence of this tiny URL in the database (doing get(tiny) on DB). If it’s already present there for some other long URL then generate a new short URL.
+If the short URL isn’t present in DB then put the long URL and TinyURL in DB (put(TinyURL, long URL)).
+This technique works with one server very well but if there will be multiple servers then this technique will create a race condition. When multiple servers will work together, there will be a possibility that they all can generate the same unique id or same tiny URL for different long URLs, and even after checking the database, they will be allowed to insert the same tiny URLs simultaneously (which is the same for different long URLs) in the database and this may end up corrupting the data. 
+We can use putIfAbsent(TinyURL, long URL) or INSERT-IF-NOT-EXIST condition while inserting the tiny URL but this requires support from DB which is available in RDBMS but not in NoSQL. Data is eventual consistent in NoSQL so putIfAbsent feature support might not be available in the NoSQL database. 
+Encode the long URL using the MD5 approach and take only the first 7 chars to generate TinyURL.
+The first 7 characters could be the same for different long URLs so check the DB (as we have discussed in technique 1) to verify that TinyURL is not used already
+Advantages: This approach saves some space in the database but how? If two users want to generate a tiny URL for the same long URL then the first technique will generate two random numbers and it requires two rows in the database but in the second technique, both the longer URL will have the same MD5 so it will have the same first 43 bits which means we will get some deduping and we will end up with saving some space since we only need to store one row instead of two rows in the database.
+MD5 saves some space in the database for the same URLs but for two long different URLs again we will face the same problem as we have discussed in technique 1. We can use putIfAbsent but NoSQL doesn’t support this feature. So let’s move to the third technique to solve this problem.
+
+Technique 3 (Counter Approach)
+Using a counter is a good decision for a scalable solution because counters always get incremented so we can get a new value for every new request. 
+
+Single server approach:  
+
+A single host or server (say database) will be responsible for maintaining the counter.
+When the worker host receives a request it talks to the counter host, which returns a unique number and increments the counter. When the next request comes the counter host again returns the unique number and this goes on.
+Every worker host gets a unique number which is used to generate TinyURL.
+Problem: If the counter host goes down for some time then it will create a problem, also if the number of requests will be high then the counter host might not be able to handle the load. So challenges are a Single point of failure and a single point of bottleneck. 
+And what if there are multiple servers? 
+
+You can’t maintain a single counter and returns the output to all the servers. To solve this problem we can use multiple internal counters for multiple servers which use different counter ranges. For example server 1 ranges from 1 to 1M, server 2 ranges from 1M to 10M, and so on. But again we will face a problem i.e. if one of the counters goes down then for another server it will be difficult to get the range of the failure counter and maintain it again. Also if one counter reaches its maximum limit then resetting the counter will be difficult because there is no single host available for coordination among all these multiple servers. The architecture will be messed up since we don’t know which server is the master or which one is a slave and which one is responsible for coordination and synchronization. 
+
+Solution: To solve this problem we can use a distributed service Zookeeper to manage all these tedious tasks and to solve the various challenges of a distributed system like a race condition, deadlock, or particle failure of data. Zookeeper is basically a distributed coordination service that manages a large set of hosts. It keeps track of all the things such as the naming of the servers, active servers, dead servers, and configuration information of all the hosts. It provides coordination and maintains the synchronization between the multiple servers. 
+Let’s discuss how to maintain a counter for distributed hosts using Zookeeper. 
+From 3.5 trillion combinations take 1st billion combinations.
+In Zookeeper maintain the range and divide the 1st billion into 1000 ranges of 1 million each i.e. range 1->(1 – 1,000,000), range 2->(1,000,001 – 2,000,000)…. range 1000->(999,000,001 – 1,000,000,000)
+When servers will be added these servers will ask for the unused range from Zookeepers. Suppose the W1 server is assigned range 1, now W1 will generate the tiny URL incrementing the counter and using the encoding technique. Every time it will be a unique number so there is no possibility of collision and also there is no need to keep checking the DB to ensure that the URL already exists or not. We can directly insert the mapping of a long URL and short URL into the DB.
+In the worst case, if one of the servers goes down then we will only lose a million combinations in Zookeeper (which will be unused and we can’t reuse it as well) but since we have 3.5 trillion combinations we should not worry about losing this combination.
+If one of the servers will reach its maximum range or limit then again it can take a new fresh range from Zookeeper.
+The addition of a new server is also easy. Zookeeper will assign an unused counter range to this new server.
+We will take the 2nd billion when the 1st billion is exhausted to continue the process.
+Using a counter is a good decision for a scalable solution because counters always get incremented so we can get a new value for every new request. 
+
+Single server approach:  
+
+A single host or server (say database) will be responsible for maintaining the counter.
+When the worker host receives a request it talks to the counter host, which returns a unique number and increments the counter. When the next request comes the counter host again returns the unique number and this goes on.
+Every worker host gets a unique number which is used to generate TinyURL.
+Problem: If the counter host goes down for some time then it will create a problem, also if the number of requests will be high then the counter host might not be able to handle the load. So challenges are a Single point of failure and a single point of bottleneck. 
+And what if there are multiple servers? 
+
+You can’t maintain a single counter and returns the output to all the servers. To solve this problem we can use multiple internal counters for multiple servers which use different counter ranges. For example server 1 ranges from 1 to 1M, server 2 ranges from 1M to 10M, and so on. But again we will face a problem i.e. if one of the counters goes down then for another server it will be difficult to get the range of the failure counter and maintain it again. Also if one counter reaches its maximum limit then resetting the counter will be difficult because there is no single host available for coordination among all these multiple servers. The architecture will be messed up since we don’t know which server is the master or which one is a slave and which one is responsible for coordination and synchronization. 
+
+Solution: To solve this problem we can use a distributed service Zookeeper to manage all these tedious tasks and to solve the various challenges of a distributed system like a race condition, deadlock, or particle failure of data. Zookeeper is basically a distributed coordination service that manages a large set of hosts. It keeps track of all the things such as the naming of the servers, active servers, dead servers, and configuration information of all the hosts. It provides coordination and maintains the synchronization between the multiple servers. 
+Let’s discuss how to maintain a counter for distributed hosts using Zookeeper. 
+ IF YOU ARE A SHOPIFY MERCHANT, YOU CAN ADD THE URL SHORT LINK GENERATOR APP TO YOUR STORE TO GENERATE TO CONVERT YOUR WEBSITE’S LONG, BORING URLS WITH SHORT URLS.URL SHORTENING WEBSITES LIKE TINYURL AND BITLY WORK BY TAKING A LONG URL AND TURNING IT INTO A MUCH SHORTER ONE. THIS IS DONE BY USING A REDIRECT ON THE SERVER SIDE, WHICH POINTS THE ORIGINAL URL TO THE SHORTER ONE. THE SPECIFIC PROCESS FOR EACH WEBSITE MAY VARY SLIGHTLY, BUT GENERALLY SPEAKING, THAT'S HOW THEY WORK!THESE TYPES OF SERVICES CAN BE HELPFUL WHEN YOU WANT TO SHARE A LINK THAT WOULD OTHERWISE BE QUITE LONG AND UNWIELDY. THEY CAN ALSO BE USED TO TRACK CLICKS, WHICH CAN BE USEFUL FOR THINGS LIKE MARKETING CAMPAIGNS. OVERALL, THEY'RE PRETTY HANDY LITTLE TOOLS!THIS URL (OR WEB ADDRESS) IS 118 CHARACTERS LONG, BUT TWITTER LIMITS POSTS TO JUST 280 CHARACTERS. THAT DOESN'T LEAVE MANY CHARACTERS TO SAY SOMETHING ABOUT THE LINK! LUCKILY, THERE IS AN EASY SOLUTION: URL SHORTENERS.A URL SHORTENER IS AN ONLINE SERVICE THAT GIVES YOU A NEW, VERY SHORT URL THAT IS EASIER TO SHARE. IT'S NOT JUST USEFUL WITH TWITTER, BUT ALSO WITH EMAIL, TEXT MESSAGES, AND ANY OTHER SITUATION WHERE A LONG URL IS UNMANAGEABLE.URL SHORTENING SERVICES LIKE BIT.LY OR TINYURL ARE VERY POPULAR TO GENERATE SHORTER ALIASES FOR LONG URLS. YOU NEED TO DESIGN THIS KIND OF WEB SERVICE WHERE IF A USER GIVES A LONG URL THEN THE SERVICE RETURNS A SHORT URL AND IF THE USER GIVES A SHORT URL THEN IT RETURNS THE ORIGINAL LONG URL. FOR EXAMPLE, SHORTENING THE GIVEN URL THROUGH TINYURL: HTTPS://WWW.GEEKSFORGEEKS.ORG/GET-YOUR-DREAM-JOB-WITH-AMAZON-SDE-TEST-SERIES/?REF=LEFTBAR-RIGHTBARWE GET THE RESULT GIVEN BELOW:HTTPS://TINYURL.COM/Y7VG2XJLA LOT OF CANDIDATES MIGHT BE THINKING THAT DESIGNING THIS SERVICE IS NOT DIFFICULT. WHEN A USER GIVES A LONG URL CONVERTS IT INTO A SHORT URL AND UPDATES THE DATABASE AND WHEN THE USER HITS THE SHORT URL THEN SEARCH THE SHORT URL IN THE DATABASE, GET THAT LONG URL, AND REDIRECT THE USER TO THE ORIGINAL URL. IS IT REALLY SIMPLE? ABSOLUTELY NOT IF WE THINK ABOUT THE SCALABILITY OF THIS SERVICE. WHEN YOU’RE ASKED THIS QUESTION IN YOUR INTERVIEWS DON’T JUMP INTO THE TECHNICAL DETAILS IMMEDIATELY. MOST OF THE CANDIDATES MAKE MISTAKES HERE AND IMMEDIATELY THEY START LISTING OUT SOME BUNCH OF TOOLS, DATABASES, AND FRAMEWORKS. IN THIS KIND OF QUESTION, THE INTERVIEWER WANTS A HIGH-LEVEL DESIGN IDEA WHERE YOU CAN GIVE THE SOLUTION FOR THE SCALABILITY AND DURABILITY OF THE SERVICE. LET’S START BY TALKING ABOUT THE REQUIREMENT FIRST… TINYURL IS A URL SHORTENING WEB SERVICE WHICH PROVIDES SHORT ALIASES FOR REDIRECTION OF LONG URLS KEVIN GILBERTSON A WEB DEVELOPER LAUNCHED THE SERVICE IN JANUARY 2002 SO HE WOULD BE ABLE TO POST LINKS IN NEWSGROUP POSTINGS THAT FREQUENTLY HAD LONG CUMBERSOME ADDRESSESIF YOU ARE A SHOPIFY MERCHANT YOU CAN ADD THE URL SHORT LINK GENERATOR APP TO YOUR STORE TO GENERATE TO CONVERT YOUR WEBSITES LONG BORING URLS WITH SHORT URLSURL SHORTENING WEBSITES LIKE TINYURL AND BITLY WORK BY TAKING A LONG URL AND TURNING IT INTO A MUCH SHORTER ONE THIS IS DONE BY USING A REDIRECT ON THE SERVER SIDE WHICH POINTS THE ORIGINAL URL TO THE SHORTER ONE THE SPECIFIC PROCESS FOR EACH WEBSITE MAY VARY SLIGHTLY BUT GENERALLY SPEAKING THATS HOW THEY WORKTHESE TYPES OF SERVICES CAN BE HELPFUL WHEN YOU WANT TO SHARE A LINK THAT WOULD OTHERWISE BE QUITE LONG AND UNWIELDY THEY CAN ALSO BE USED TO TRACK CLICKS WHICH CAN BE USEFUL FOR THINGS LIKE MARKETING CAMPAIGNS OVERALL THEYRE PRETTY HANDY LITTLE TOOLSTHIS URL OR WEB ADDRESS IS 118 CHARACTERS LONG BUT TWITTER LIMITS POSTS TO JUST 280 CHARACTERS THAT DOESNT LEAVE MANY CHARACTERS TO SAY SOMETHING ABOUT THE LINK LUCKILY THERE IS AN EASY SOLUTION URL SHORTENERSA URL SHORTENER IS AN ONLINE SERVICE THAT GIVES YOU A NEW VERY SHORT URL THAT IS EASIER TO SHARE ITS NOT JUST USEFUL WITH TWITTER BUT ALSO WITH EMAIL TEXT MESSAGES AND ANY OTHER SITUATION WHERE A LONG URL IS UNMANAGEABLEURL SHORTENING SERVICES LIKE BITLY OR TINYURL ARE VERY POPULAR TO GENERATE SHORTER ALIASES FOR LONG URLS YOU NE

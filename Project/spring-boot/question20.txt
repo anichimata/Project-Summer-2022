@@ -1,0 +1,1163 @@
+People around the world watch over 1 billion hours of YouTube videos every day—everything from cat videos to videos for cats. The YouTube algorithm is the recommendation system that decides which videos YouTube suggests to those 2 billion-plus human users (and untold numbers of feline users).
+
+This begs an important question for marketers, influencers, and creators alike: how do you get YouTube’s algorithm to recommend your videos and help you earn more likes?
+
+In this blog post we’ll cover what the algorithm is (and isn’t), go over the most recent changes for 2022, and show you how the pros work with YouTube’s search and discovery systems to get videos in front of eyeballs.
+According to founder Jawed Karim (a.k.a. the star of Me at the zoo), YouTube was created in 2005 in order to crowdsource video of Janet Jackson and Justin Timberlake’s notorious Superbowl performance. So it should come as no surprise that for many years, YouTube’s algorithm would show recommended videos that attracted the most views or clicks.
+
+Alas, this led to a proliferation of misleading titles and thumbnails—in other words, clickbait. User experience plummeted as videos left people feeling tricked, unsatisfied, or plain old annoyed.
+
+2012: Optimizing for watch time
+In 2012, YouTube adjusted its recommendation system to support time spent watching each video, as well as time spent on the platform overall. When people find videos valuable and interesting (or so the theory goes) they watch them for longer, perhaps even to the end.
+
+This led some creators to try to make their videos shorter in order to make it more likely viewers would watch to completion, whereas others made their videos longer in order to increase watch time overall. YouTube didn’t endorse either of these tactics, and maintained the party line: make videos your audience wants to watch, and the algorithm will reward you.
+
+That said, as anyone who has ever spent any time on the internet knows, time spent is not necessarily equivalent to quality time spent. YouTube changed tack again.
+
+2015-2016: Optimizing for satisfaction
+In 2015, YouTube began measuring viewer satisfaction directly with user surveys as well as prioritizing direct response metrics like Shares, Likes and Dislikes (and, of course, the especially brutal “not interested” button.)
+
+In 2016, YouTube released a whitepaper describing some of the inner workings of its AI: Deep Neural Networks for YouTube Recommendations.
+
+YouTube recommendation system architecture
+
+Source: Deep Neural Networks for YouTube Recommendations
+
+In short, the algorithm had gotten way more personal. The goal was to find the video each particular viewer wants to watch, not just the video that lots of other people have perhaps watched in the past.
+
+As a result, in 2018, YouTube’s Chief product officer mentioned on a panel that 70% of watch time on YouTube is spent watching videos the algorithm recommends.
+
+2016-present: Dangerous content, demonetization, and brand safety
+Over the years, YouTube’s size and popularity has resulted in an increasing number of content moderation issues, and what the algorithm recommends has become a serious topic not just for creators and advertisers, but in the news and government.
+
+YouTube has said it is serious about its responsibility to support a diverse range of opinions while reducing the spread of harmful misinformation. Algorithm changes enacted in early 2019, for example, have reduced consumption of borderline content by 70%. (YouTube defines borderline content as content that doesn’t quite violate community guidelines but is harmful or misleading. Violative content, on the other hand, is immediately removed.)
+
+This issue affects creators, who fear accidentally running afoul of ever-changing community guidelines and being punished with strikes, demonetization, or worse. (And in fact, according to CEO Susan Wojcicki, one of YouTube’s priorities for 2021 is increasing transparency for community guidelines for creators). It also affects brands and advertisers, who don’t want their name and logo running alongside white supremacists.
+
+Meanwhile, American politicians are increasingly concerned with the societal role of social media algorithms like YouTube’s. YouTube (and other platforms) have been summoned to account for their algorithms at Senate hearings, and in early 2021 Democrats introduced a ”Protecting Americans from Dangerous Algorithms Act.”
+
+Next, let’s talk about what we know about how this dangerous beast works.
+
+How does the YouTube algorithm work in 2022?
+The YouTube algorithm selects videos for viewers with two goals in mind: finding the right video for each viewer, and enticing them to keep watching.
+
+When we talk about “the algorithm,” we’re talking about three related but slightly different selection or discovery systems:
+
+one that selects videos for the YouTube homepage;
+one that ranks results for any given search; and
+one that selects suggested videos for viewers to watch next.
+YouTube says that in 2022, homepage and suggested videos are usually the top sources of traffic for most channels. Except for explainer or instructional videos (i.e., “how to tune up a bicycle”), which often see the most traffic from search, instead.
+
+How YouTube determines the algorithm
+Which ranking signals does YouTube use to decide which videos to show to people?
+
+Each traffic source is slightly different. But ultimately, what affects your video’s view count is a mix of:
+
+personalization (the viewer’s history and preferences)
+performance (the video’s success)
+external factors (the overall audience or market)
+personalization performance and external factors
+
+Source: Creator Insider
+
+How YouTube determines its homepage algorithm
+Every time a person opens their YouTube app or types in youtube.com, the YouTube algorithm offers up a diverse array of videos that it thinks that person might like to watch.
+
+YouTube homepage algorithm
+
+This selection is often broad because the algorithm hasn’t yet figured out what the viewer wants: acoustic covers of pop songs? Inspirational anti-procrastination speeches? To catch up with their favorite possum vlogger?
+
+Videos get selected for the homepage based on two types of ranking signals:
+
+Performance: YouTube measures performance with metrics like click-through rate, average view duration, average percentage viewed, likes, dislikes, and viewer surveys. Essentially, after you upload a video the algorithm shows it to a few users on the homepage, and if it appeals to, engages, and satisfies those viewers (i.e., they click on it, watch it all the way through, like it, share it, etc.) then it gets offered to more and more viewers on their homepages.
+Personalization: However, YouTube is not a trending tab. Personalization means that YouTube offers videos to people that it thinks are relevant to their interests based on their past behavior, a.k.a. watch history. If a user likes certain topics or watches a lot of a particular channel, more of the same will be offered up. This factor is also sensitive to changes in behavior over time as a person’s interests and affinities rise and fade.
+How YouTube determines its suggested video algorithm
+When suggesting videos for people to watch next, YouTube employs slightly different considerations. After a person has watched a few videos during a visit, the algorithm has more of an idea about what a person is interested in today, so it offers up some options on the right side of the screen:
+
+suggested video algorithm Charlie bit my finger
+
+Here, in addition to performance and personalization, the algorithm is most likely to recommend:
+
+Videos that are often watched together
+Topically related videos
+Videos the user has watched in the past
+Pro Tip: For creators, using YouTube Analytics to check out what other videos your audience has watched can help you zero in on what broader or related topics and interests your audience cares about.
+
+Pro Tip #2: Making a sequel to your most successful video is a tried-and-true technique. Ryan Higa went viral with a video about singing technique—he didn’t drop the sequel until three years later, but timing is up to you, really.
+
+
+
+How YouTube determines its search algorithm
+YouTube is as much a search engine as it is a video platform, meaning that a little bit of SEO know-how is important.
+
+Sure, sometimes people go to YouTube to hunt down a specific video to watch (hello again, peanut butter baby). But even then, the algorithm decides how to rank the search results when you type in “peanut butter baby”.
+
+YouTube search algorithm "peanut butter baby"
+
+How do you get your video to rank near the top of search?
+
+Keywords: Youtube’s search algorithm relies on the keywords you use in your video’s metadata to decide what your video is about. So if you want your video to show up when people search for videos about laparoscopic surgery, you probably want to include those two words. (We have plenty more keyword advice below, so keep reading.)
+Performance: After the algorithm has decided what your video is, it will test that hypothesis by showing it to people in search results. That’s when performance (click-through rate, watch time, likes, survey feedback, etc.) becomes important. If your video appeals to and satisfies people looking for your keywords, it will be shown to even more people, and climb up the SERPs.
+7 tips to improve your organic reach on YouTube
+All that said, when it comes to working with the YouTube algorithm, remember that the algorithm follows the audience. If you already have a YouTube marketing plan in place, these tips will help you grow your channel’s impact with your viewers.
+
+Do your keyword research
+There’s no human being sitting at YouTube headquarters watching your video and ranking it.
+
+Instead, the algorithm looks at your metadata as it decides what the video is about, which videos or categories it’s related to, and who might want to watch it.
+
+When it comes to describing your video for the algorithm, you want to use accurate, concise language that people are already using when they search.
+
+Because YouTube is a search engine as much as a video platform, you can conduct your keyword research in the same way you would for a blog post or web copy: using free tools like Google Adwords or SEMrush.
+
+
+Bonus: Download the free 30-day plan to grow your YouTube following fast, a daily workbook of challenges that will help you kickstart your Youtube channel growth and track your success. Get real results after one month.
+
+Get the free guide right now!
+Once you’ve identified your primary keywords, you’ll want to use them in four places:
+
+In the video’s file name (i.e., laparoscopic-appendectomy.mov)
+In the video’s title (using catchy natural language like “Real life step by step laparoscopic appendectomy”)
+In the YouTube video description (especially within the first two lines, above the fold)
+In the video’s script (and therefore in the video’s subtitles and closed captions—which means uploading an SRT file).
+But there’s one place you don’t need to put your keywords:
+
+In the video’s tags. According to Youtube, tags “play a minimal role in video discovery” and are most helpful if your keyword or channel name is often misspelled. (i.e., laporoscopic, lapparascopic, appendictomy, apendectomy, etc.)
+Make it impossible for people to resist clicking on your thumbnail
+But without being clickbaity, obviously.
+
+“Appeal” is the word YouTube uses to describe how a video entices a person to take a risk (albeit a minor one) and watch something new. To maximize your video’s appeal:
+
+Upload a custom thumbnail (and keep the visual style consistent across all your thumbnails)
+Write an intriguing, catchy title—the kind you can’t not click on
+Remember the first sentence or so of the description will show up in search, so make it interesting and relevant.
+For example, Tee Noir’s pop culture commentary channel uses a consistent, energetic template: thumbnails featuring her face (with a clear emotion), and conversational, direct titles. The background image almost always informs the title in some way, creating a compellingly clickable package.
+
+Tee Noir channel consistent thumbnail
+
+Source: Tee Noir
+
+Keep people watching your video, and all your videos
+Once you have a viewer watching one video, make it easy for them to keep watching your content, and stay within your channel’s ecosystem. To this end, use:
+
+Cards: flag relevant other videos in your video
+End screens: end with a CTA to watch another relevant video
+Playlists: of topically similar videos
+Subscription watermarks (for more on converting viewers to subscribers, read our guide to getting more YouTube subscribers)
+Pro Tip: Making a video series is a great way to capitalize on a recent spike in viewers.
+
+If a video of your 12-year-old child singing a cover went viral, perhaps more covers are in order. You can publish a series all at once for binge watching, or drop them regularly to keep people coming back, depending on your strategy.
+
+Attract views from other sources
+Views that don’t come from the YouTube algorithm can still inform your success with the algorithm. For instance: YouTube ads, external sites, cross-promoting on social media, and partnerships with other channels or brands can all help you earn views and subscribers, depending on your strategy.
+
+The algorithm really won’t punish your video for having a lot of traffic coming from off-site (a blog post, for example). This is important because click-through-rates and view duration often tank when the bulk of a video’s traffic is from ads or an external site.
+
+According to YouTube’s product team, the algorithm only pays attention to how a video performs in context. So, a video that performs well on the homepage will be surfaced to more people on the homepage, no matter what its metrics from blog views look like.
+
+Pro Tip: Embedding a YouTube video in your blog or website is great for both your blog’s Google SEO as well as your video’s view counts on YouTube. Just like so:
+
+
+
+Engage with comments and other channels
+In order for your audience to grow, you need to nurture your relationships with your viewers. For many viewers, part of YouTube’s appeal is feeling closer to creators than they do to traditional celebrities.
+
+Relationship-building with your viewers and other creators can build bridges that will help you all the way down the line. Hootsuite’s community engagement tools are a great way to stay on top of this.
+
+
+
+Give the people what they want
+More than anything else, in a time of content saturation, people want quality. The algorithm prioritizes satisfaction for each individual user. So find your niche and lean into it.
+
+To help, YouTube says it’s working on collecting more satisfaction metrics and providing it to creators in their analytics
+
+As Yorkshireman Danny Malin found when his YouTube channel Rate My Takeaway went viral in 2020, once you find your formula, rinse and repeat.
+
+
+
+Pro Tip: While YouTube certainly supports the idea of uploading consistently in order to build and maintain a relationship with your audience, it’s a myth that the algorithm will punish you for publishing too frequently or not frequently enough. Audience growth has no correlation with time between uploads.
+
+Evolve by experimenting
+At the same time, keeping an eye on Google Trends and leaving yourself room for experimentation means you won’t get left behind when the zeitgeist turns on a dime. (I’m looking at you, skinny jeans.)
+
+Google Trends compare search terms
+
+Take courage from the fact that if an experiment really bombs, that low-performing video won’t down-rank your channel or future videos in any way. (Unless you have truly alienated your audience to the point where they don’t want to watch you anymore.) Your videos all have an equal chance to earn viewers, according to YouTube’s product team.
+
+Grow your YouTube audience faster with Hootsuite. From one dashboard, you can manage and schedule YouTube videos alongside content from all your other social channels. Try it free today.
+
+Get Started
+
+
+Grow your YouTube channel faster with Hootsuite. Easily moderate comments, schedule video, and publish to Facebook, Instagram, and Twitter.
+
+Free 30-Day Trial
+   
+Become a better social marketer.
+Get expert social media advice delivered straight to your inbox.
+
+Email address
+Sign up
+By Paige Cooper
+YouTube’s algorithm has changed over the years to reward viewer satisfaction over total clicks and views.
+
+So what does that mean for marketers?
+
+This article contains an overview of how YouTube’s algorithm works and what it’s designed to do.
+
+There are a total of 20 facts about YouTube’s algorithm throughout the following sections, which have all been confirmed by the company itself.
+
+A summary of all facts is listed at the end.
+
+Let’s start with clearing up some misconceptions.
+
+YouTube Algorithm Misconceptions
+A major misunderstanding marketers have about YouTube is that all content is ranked by one algorithm.
+
+YouTube has multiple algorithms for ranking content in the different areas where videos are surfaced. This includes the home page, suggested videos, and search results.
+
+This article focuses on how YouTube’s recommendation system works, which consists of the home page and suggested videos algorithms.
+
+YouTube says the recommendation system is where most traffic to videos comes from, not the search bar.
+
+
+YouTube’s recommendation system is designed to find videos for viewers, rather than viewers for videos.
+
+It isn’t designed to push out or promote videos to viewers. The recommendation system works the opposite way.
+
+When a user visits YouTube the recommendation system pulls in videos and ranks the best candidates according to what that user is most likely to watch.
+
+YouTube aims to help each viewer find videos they want to watch, and maximize long term viewer satisfaction so they keep coming back.
+
+Top YouTube Ranking Factor: Viewer Satisfaction
+How YouTube ranks content for users has changed over time. Here’s a brief history:
+
+2011: Top ranking factors were clicks and views.
+2012: Top ranking factor was watch time.
+2015-Today: Top ranking factor is viewer satisfaction.
+Ranking videos based on total clicks and views proved to be ineffective as it lead to an abundance of clickbait with misleading titles and thumbnails.
+
+
+Total watch time seemed like a better way to rank videos. However, there were flaws as it did not take into account whether users enjoyed the content they watched.
+
+Now, YouTube’s top priority is to rank content according to what will leave a user feeling satisfied.
+
+How YouTube Measures Viewer Satisfaction
+YouTube uses a combination of surveys and signals to measure viewer satisfaction.
+
+YouTube learns what users like by periodically displaying surveys asking how they feel about videos they watched.
+
+Data from the surveys is used to train prediction models to identify which videos are highly satisfying.
+
+YouTube also uses engagement signals to measure viewer satisfaction, such as likes and dislikes and clicks of the ‘not interested’ button.
+
+How YouTube Ranks Content on the Home Page
+The YouTube home page shows users a selection of videos its algorithms have determined they’re most likely to watch.
+
+YouTube’s home page ranking algorithm uses a combination of performance and personalization signals. It aims to deliver the most relevant recommendations to each viewer.
+
+Top Freelancers for Every Business
+Fiverr gives your team the flexibility to expand in-house capabilities and execute every project by connecting with freelancers for every skill set you need.
+
+ADVERTISEMENT
+Ranking on the YouTube home page is based on:
+
+Performance: Using click-through rate and average view duration, YouTube measures how well a video engaged other viewers when they saw it on their home page.
+Personalization: YouTube personalizes a user’s video recommendations based on their watch history and how often they engage with a specific channel or topic.
+Recommendations for Marketers
+To maximize performance on the YouTube home page, take an objective look at your video and pretend you’re a new viewer who is unfamiliar with your channel.
+
+If all the context you had was a video’s title and thumbnail, would you be compelled to click?
+
+Uploading consistently can help sustain audience interest and help viewers build a routine around watching the channel. This is key to generating viewer satisfaction signals.
+
+How YouTube Ranks Videos in the ‘Suggested’ Section
+Suggested videos, which appear on the right-hand side of the screen while viewing content, offers users a selection of videos they’re likely to watch next.
+
+The suggested videos section doesn’t only show videos that are relevant to the one being watched. YouTube’s algorithm also takes into account the user’s prior activity.
+
+
+YouTube aims to ensure videos pulled into the suggested section are both personalized and related to what a user is currently watching.
+
+YouTube’s suggested videos algorithm uses ranking signals such as:
+
+Which videos are often watched together.
+Which videos are related by topic.
+Which videos has a user previously watched.
+By understanding what videos are often watched together, YouTube is able to identify videos users are likely to watch but haven’t been exposed to yet.
+
+Knowing how much of a channel or topic a user has watched in the past can help YouTube identify what to suggest more or less of.
+
+Recommendations for Marketers
+Developing a series of videos can help get more of your videos featured in the suggested section.
+
+Having identifiable branding, with a consistent title and thumbnail style, will make it easier for users to spot your videos among all other suggestions.
+
+Ending each video with a call to action to watch another video can keep viewers engaged and generate the important user satisfaction signals.
+
+
+Utilizing playlists and end screens can also help get more of your videos featured in the suggested section.
+
+External Factors Impacting YouTube Rankings
+It’s important for marketers to keep in mind that external factors may be impacting their video rankings on YouTube’s home page and suggested sections.
+
+These factors are outside of a content creator’s control. They include:
+
+Topic interest: Different topics have different potential audience sizes. Niche topics may get limited exposure due to lack of widespread interest.
+Competition: How much time your audience spends with content from other channels can impact how much of your content is recommended to them.
+Seasonality: YouTube viewership fluctuates throughout the year and usually goes down during holidays. Topic interest can change with seasons. For example, outdoor videos are more popular in summer.
+Recommendations for Marketers
+Although external factors exist, do not automatically assume a drop in viewership is due to a factor outside of your control.
+
+If you notice an extended drop in impressions for 3 months or longer, that may be a sign to try something new with your content.
+
+Keep experimenting because peoples’ interests change over time. If you routinely produce content around a specific topic, then pivoting to a different topic may help bring impressions back up.
+
+In Summary: 20 Facts About YouTube’s Algorithm
+Here’s a summary of the 20 things you just learned about YouTube’s algorithm:
+
+YouTube’s algorithm is actually two algorithm – the home page algorithm and suggested videos algorithm.
+The two algorithms are referred to as the recommendation system.
+Most video traffic is generated by YouTube’s recommendation system, not search results.
+The recommendation system pulls videos in for individual users, rather than pushing content out for all users.
+Videos are pulled in according to what an individual user is most likely to watch.
+The ranking priorities of YouTube’s algorithms have changed over time.
+In 2011, clicks and views were a top ranking signal.
+In 2012, total watch time was a top ranking.
+From 2015 to today, viewer satisfaction is the top ranking signal.
+YouTube uses surveys to measure viewer satisfaction.
+Clicks of the ‘not interested’ button are a viewer satisfaction signal.
+Likes and dislikes are a viewer satisfaction signal.
+Average view duration is a viewer satisfaction signal.
+Average percentage viewed is a viewer satisfaction signal.
+Ranking on YouTube’s home page is based on a combination of performance and personalization.
+Performance is measured by how users engage with a video in the context it’s shown.
+Personalization is based on a user’s previous activity.
+Videos shown in YouTube’s suggested section are both personalized and related to the current video.
+YouTube’s suggested videos algorithm aims to understand which videos are often watched together.
+External factors can impact YouTube’s video recommendations, which include topic interest, seasonality, and competition.
+Insight from Industry Experts
+While putting together this article I reached out to several industry experts for their take on You
+Today, YouTube is the second biggest social networking site with over 2.3 billion monthly active users and 300 hours of video uploaded to YouTube every minute!
+
+It's evergreen, it's growing with time, you can monetize it, and there's so much power in YouTube. However, many people struggle with it.
+
+Beating the YouTube algorithm is a myth since the platform has had more than 15 years to perfect its artificial intelligence. It guides the viewers' behavior, which also has a significant influence on the content creators. Let's take a closer look at the secrets of the YouTube algorithm in 2021 and use it to your advantage.
+
+What Is The YouTube Algorithm?
+How The YouTube Algorithm Works?
+How Does YouTube Shorts Algorithm Work?
+How To Beat The YouTube Algorithm?
+You can directly jump to a section of your choice or keep scrolling.
+
+What Is The YouTube Algorithm?
+According to YouTube, the algorithm is a "real-time feedback loop that tailors videos to each viewer's different interests."
+
+The YouTube algorithm decides which videos get suggested to individual users. In addition, the algorithm also helps to place videos at different places on the platform for people to view and click on the content.
+
+Therefore, the content that appears on your home page is different from someone else's feed. All this is possible due to the YouTube algorithm.
+
+The algorithm's goals are twofold:
+
+Find the right video for each viewer
+Get viewers to keep watching
+How The YouTube Algorithm Works?
+YouTube videos appear in six different locations on the platform. YouTube has a well-defined AI-based algorithm that defines how videos will appear at these 6 locations so as to serve the best interest of the viewer.
+
+Search Results
+Recommended Streams
+Notifications
+Channel Subscriptions
+Trending Streams
+YouTube Home Page
+How The YouTube Algorithm Works For Search Results?
+When you search for specific terms in the YouTube search bar, you see the search term results. But how does YouTube decide the ranking of videos on the search page?
+
+
+For search results, YouTube's suggestion is mainly based on the relevance of your video to the user's search and the keywords that you use in the video title and description. When YouTube delivers these results, they obviously want to ensure that the keyword or variations of the keyword that the user searched for are present in your video's title and/or description.
+
+The YouTube algorithm also takes a look at whether the user has watched your videos before or not. Beyond that, YouTube also looks at which videos have driven the most engagement for a particular search query. Search results are not just a list of the most-viewed videos for a given query.
+
+How To Rank In The YouTube Search Results?
+To rank in YouTube's search results for specific keywords that are featured in your video, ensure to write relevant extended descriptions for your videos that feature those keywords. Also, make sure not to stuff keywords in your title or description or write content that isn't relevant to your video at all.
+
+Incorporate the most relevant search terms in your videos. Write robust video descriptions of up to 1-2 paragraphs long, if relevant.
+
+You can even brainstorm new YouTube video ideas by looking at search results for popular and less competitive queries. Lookout and identify those opportunities to serve your audience that isn't already well-served.
+
+How The YouTube Algorithm Works For Recommended Streams?
+The recommended video results appear on your home page.
+
+
+Image Source: Medium
+
+The first part of the algorithm recommended videos focuses on the viewer's history. The following questions help YouTube select videos that are custom chosen for the viewers' satisfaction:
+
+What kind of videos have they watched before?
+Do they mostly listen to music?
+Do they watch vlogs?
+Which channels videos do they watch frequently?
+The second part of this algorithm focuses on the interaction between top videos and similar viewers (the one you are targeting). For instance, YouTube might have a group of users that consistently listen to the same band's music on YouTube. From there, they will choose the videos most watched by this similar audience and rank them highly when recommending videos of similar bands for other viewers.
+
+One great thing about YouTube's recommendation algorithm is that it won't suggest the same videos and the same channels again and again. The algorithm knows and understands that viewers are interested in watching more than one topic and will create suggestions based on their previously watched videos.
+
+How To Rank In The Recommended Section?
+To rank your videos in the "Recommended" section of YouTube's interface, it is suggested that the end screen of your videos should close with a strong call to action that suggests your next video.
+
+How The YouTube Algorithm Works For Home Page Videos?
+Home page results refer to the results that appear on your home screen when you first log in to your YouTube account.
+
+
+Image Source: YouTube
+
+YouTube aims to deliver the most relevant and personalized recommendations to each viewer at this place. It is also an excellent place for non-subscribers to find your channel and its videos. Over 200 million different videos appear on the Home page each day for viewers around the world.
+
+When a user visits their home page, YouTube displays videos from their subscribed channels, videos watched by similar viewers, new videos, and more. The selection of these videos is based on the following factors:
+
+Overall video Performance: How well the video has engaged and satisfied similar viewers?
+
+Viewer's watch and search history: It refers to how often the viewer watches videos of a channel or topic and how many times YouTube has already shown each video to the viewer.
+
+YouTube has also found that channel subscribers watch more videos of that channel from their home page than through the Subscriptions tab.
+
+How To Rank On YouTube Home Page?
+Upload videos consistently. This gives your audience an expectation of when they can get new and fresh videos delivered to their home page from your end.
+
+Keep your viewers engaged for a longer duration with your videos and encourage them to come back for more content. Whether you do it with one long video or you upload several short videos, the longer you keep your viewers watching your videos, the more your content will get surfaced on the platform.
+
+Keep doing what works best for you. When you create videos that are liked by your audience, keep creating similar kinds of videos. This is because YouTube surfaces more of what viewers want to see. Do keep experimenting mindfully to see what your audience likes to view. Observe the feedback from your audience and give them time to adjust.
+
+See how often your channel appears at home, globally, by going to your YouTube Analytics Traffic Sources.
+
+Avoid creating content that violates the YouTube policies. Ensure you title your videos accurately, use non-spammy and appropriate tags, and avoid misleading thumbnails.
+
+How The YouTube Algorithm Works For Trending Streams?
+YouTube's Trending feed is a list of new and popular videos on YouTube in a viewer's country. In the trending feed, some trends are predictable, such as a new song from a popular artist or a new movie trailer, but some are completely surprising.
+
+
+Image Source: Medium
+
+Therefore, YouTube aims to combine popularity with novelty while sorting out videos for the trending feed. This list considers the total view count (especially the rate of growth in views), where views are coming from, and some other signals as well. Hence, the video with the highest daily view count may not necessarily be number 1 on the Trending list.
+
+The trending list also includes Creator On the Rise and Artist On The Rise, where every week, up-and-coming creators and artists are featured for a full day. Trending videos are never sponsored; this simply means that creators can't pay to have their videos shown in the trending videos list.
+
+How To Rank In The Trending Streams?
+Consider making broadly appealing and shareable videos. When you create such videos, they have the potential to reach tons of different audiences besides your subscribers.
+
+Focus on metrics such as the total number of videos uploaded, growth in views, and growth in subscribers.
+
+Observe how often your videos appear on the trending tab by looking at YouTube Analytics Traffic Sources.
+
+Know more about YouTube Analytics: A Powerful Way To Grow Your Channel
+
+How The YouTube Algorithm Works For Channel Subscription?
+Viewers can see all the newly uploaded videos from all the channels they have subscribed to by visiting their subscriptions page. This feed includes highlighted videos and a list of all the most recent uploads.
+
+
+Since subscribers are those viewers who have themselves opted in to see more of your videos, they are your core audience and biggest fans. Remember that subscribers also see some subscription content on their Homepage and in the Suggested Videos section.
+
+In order to rank your video in a viewer's subscription tab results, YouTube uses view velocity. View velocity is a number that quantifies the number of subscribers who watch your video right after it's published. Your videos will rank higher in your viewer's subscription tab, depending on how high your view velocity is.
+
+Also, know that view velocity isn't the only part of the subscriptions ranking algorithm. YouTube also looks at the number of followers your channel has when ranking your videos.
+
+How To Rank On The Subscriptions Page?
+Ask in a genuine way to your viewers to subscribe to your channel. Explain to them the benefits and how subscribing to your channel will support you. Avoid buying subscribers by all means.
+
+Ask viewers to subscribe to your channel when their sentiment is at its highest. This can include events such as after a big laugh or a scene's climax).
+
+Educate your viewers on where they will see your channel's videos once they subscribe.
+
+Make your videos public when you think your viewers are most likely watching, and there are chances of gaming more subscribers to your channel.
+
+Understand that it's common to have more subscribers than views. All your subscribers won't be able to see all videos of your channel.
+
+Make a creative series of videos out of your ideas. This will encourage your viewers to keep coming back to your channel for more exciting content. In this sense, they have more chances of subscribing to your channel.
+
+Remember that it's normal to get a few subscribers to unsubscribe when you upload specific videos.
+
+See how many viewers are subscribing to your channel in YouTube Analytics. Compare your watch time from subscribers with watch time from other traffic sources to calculate your content's impact on your audience.
+
+Statusbrew makes this easy for you to carry out this comparison by simply selecting the most appropriate metrics and creating the widget of your choice. In fact, Statusbrew allows you to make many more comparisons by offering 180+ industry-rich metrics that would help you to determine your channel's growth and performance.
+
+How The YouTube Algorithm Works For Notifications?
+YouTube notifications are alerts sent via mobile push alerts or emails when a new video is made public. They tend to kickstart early traffic to your newly uploaded videos but don't necessarily drive the bulk of traffic in the long run.
+
+By default, YouTube only sends occasional notifications to viewers from channels they watch a lot of those you are subscribed to. If your subscribers wish to receive notifications every time you upload a new video on your channel, they can tap the bell icon next to the "SUBSCRIBED" button.
+
+Your viewers can either opt to either receive no notifications from your channel, receive some notifications or receive all notifications.
+
+
+The only way to optimize your videos for showing up in viewers' notifications is to ask your subscribers to tap the bell button next to the subscribe button.
+
+When viewers receive too many notifications, YouTube has observed that they often tend to unsubscribe from notifications altogether. Therefore, YouTube limits notifications to 3 per upload/live stream per channel in a 24-hour window.
+
+How To Rank On The YouTube Notifications?
+Thank your dedicated group of fans and subscribers who have tapped the bell icon.
+
+Make your videos public when you think most of your viewers are awake and ready to watch.
+
+Observe the watch time generated when your channel appears in notifications globally. It can be viewed from your YouTube Analytics Traffic Sources.
+
+When some of your subscribers have pressed the bell icon but still aren't receiving the notifications, ask them to make sure that notifications are turned on in their mobile device settings from YouTube.
+
+How Does YouTube Shorts Algorithm Work?
+Whenever you upload a YouTube Short, your subscribers get notified about it. This will draw the viewer's attention and increase the traffic.
+
+
+Image Source: Theverge
+
+Other than that, your viewers will also be able to watch it from their Homepage. Whether they are your subscribers or not, YouTube Shorts of a channel will be visible to them on the Homepage. YouTube Shorts are shown on the Homepage based on the traffic due to subscribers watching it after getting a notification and recommendations.
+
+Apart from these, the Shorts Shelf is another way how your YouTube Shorts can gain traffic. For your videos to appear on this shelf, you will have to wait for some time, ranging from 24 hours to several days (or even a week). And once it hits the Shorts Shelf, you will observe a massive growth in traffic driven towards it. Remember, the largest and most explosive growth comes from the Shorts shelf.
+
+How To Beat The YouTube Algorithm?
+One of the best ways to stand out of the competitive space on YouTube is to ensure that you create quality content and use the right tools and techniques to optimize your videos for the YouTube algorithm. Apart from the tips mentioned above for optimizing your videos for specific sections, here are some tips on how to beat the YouTube algorithm.
+
+Focus On Your Audience And Not The Algorithm
+YouTube's goal is always to get people to watch more videos that they enjoy so that they come back to the platform regularly.
+
+YouTube's systems have no opinion about what type of video you make and don't favor any particular video format. Instead, they try their best to follow the audience by paying attention to aspects such as:
+
+What they watch the most
+What they don't watch
+How much time do they spend watching a particular creator's or channels video
+Likes and dislikes on your videos
+'Not interested' feedback from viewers
+Rather than focusing on what the algorithm 'likes,' it's better to focus on what your audience likes. If you do that, the YouTube algorithm will automatically follow you.
+
+Expect Fluctuations And Seasonality In Your Views
+It's natural for your channel's performance to fluctuate over time. Today's audiences have a lot of options. They may like your videos one week and not so much the next week -- or maybe they are on vacation and not even browsing YouTube. Expect fluctuations and seasonality in your views and video performance, and try not to jump to conclusions based on a few uploads. Take a higher-level view of your overall channel performance.
+
+Keep Up With Experimentation
+Experimenting is super essential for creative people. When starting a new YouTube channel, you should try almost all sorts of videos until something works. After that, if you would like to try something new, listen to your audience's feedback.
+
+If you have been posting the same kind of videos for a long time and it isn't driving as much engagement as it used to, this signals that it's time to try out something new. Because even the best video formats have a finite shelf life, and experimentation with different video formats can help you identify the next wave to maintain or grow your engagement.
+
+Use Long-Tail Keywords As YouTube Tags
+The number of tags you can include in your videos is limited. Hence you may want to look for long-tail keywords or multiple-word tags relevant to your video's broader topic. Remember that you should never use copyrighted or trademarks material in your metadata if you do not have explicit permission from the owner.
+
+
+Image Source: Strangershow.com
+
+Research Your Competitors On YouTube
+Before you start creating videos for your target audience, it can be helpful to research what kinds of videos your competitors are creating. Doing this will help you have a good idea about what your competitors are doing to attract the target audience's attention, including:
+
+The kind of videos they are creating
+The level of their engagement
+The number of views they have
+The metadata they are using
+Once you know all these aspects of your competitors' videos, it will become easier for you to produce better content.
+
+Optimize Your Video Thumbnail
+Thumbnails are like a Miniature visual window or mini-poster to your YouTube videos. It helps your viewers decide whether to see your video or not, as thumbnails are the first thing that viewers see. Keep in mind the below points to optimize the first look of your video to gain the maximum clicks and views on your video.
+
+Prioritize the USP of your video while creating thumbnails
+Design your thumbnail creatively
+Sync your thumbnail with video content
+Go with YouTube's specific video thumbnail requirements:
+
+16:9 aspect ratio
+Optimal resolution of 1280×720 (the minimum width of 640 pixels)
+Image formats: JPG, GIF, or PNG.
+Under the 2MB limit
+
+Image Source: Pixelixe
+
+Deep Dive Into The YouTube Analytics
+The amount of insight you are able to gather about your audience from Analytics and the ability to gauge their interest in your content is incredible. The goldmine lies in the data about website traffic, lead generation, and sales for your business.
+
+While YouTube Creator Studio provides insights into your overall channel performance, it's using a social analytics tool such as Statusbrew that you can deep dive into the analytics of each video to judge their performance and make informed decisions.
+
+Statusbrew's Reports Lab feature allows you to track minute metrics about your YouTube videos, such as YouTube red views, YouTube views, YouTube likes, dislikes, shares and comments, average view duration, estimated minutes watched.
+
+
+In fact, you also have the flexibility to prepare reports as per your need or choose from a dozen report templates already provided. The good thing here is that every report is draggable, easy to arrange; you have complete control over design, and every widget is exportable.
+
+Want to discuss more? Snag a free trial today!
+
+Try Statusbrew
+
+Statusbrew is an all in one social media management tool that supports Facebook, Instagram, Twitter, Linkedin, YouTube, and even Google My Business.
+
+Tags
+Just like Google has an algorithm that determines how pages rank in search engine results pages, YouTube has an algorithm for its platform as well. It’s no surprise, considering YouTube utilizes a results-page style for its videos, similar to the way Google provides results. Where Google is pretty tight-lipped about its algorithm, YouTube has released tons of great resources to help users rank better in their platform.
+
+Here’s what we’ve learned about how YouTube ranks videos, and how you can help your videos climb to the top.
+
+Good agencies have more than 50 testimonials.
+
+Great agencies have more than 100 testimonials.
+
+WebFX has over 1,020+ glowing client testimonials.
+See What Makes Us Stand out 
+
+What is the goal of YouTube’s algorithm?
+Just like Google, YouTube’s algorithm aims to provide searchers with relevant, personalized videos. There are five separate sections of YouTube where this algorithm works: Home, Search, Recommended Videos, Trending, and Subscriptions. That means that for each of those sections of the interface, YouTube works to present users with options that they’ll love.
+
+But how do they know what videos their audience will love? That’s where the algorithm comes in. Similar to the way that Google no longer accepts keyword stuffing, YouTube wants to see videos that are created for your audience instead of trying to beat the system.
+
+You shouldn’t load your descriptions with keywords or create videos that you think the platform will like.
+
+
+
+Creating videos for your audience and your audience alone is enough to catch YouTube’s eye. Let’s talk about each section that you can rank in on YouTube and how you can get to the top of each.
+
+1 & 2. Home and recommended results algorithm
+Home results refer to the results that appear on your home screen when you first log in to your YouTube account.
+The recommended results appear on your home page and come in the form of single videos and channels.
+
+The first part of the algorithm for home and recommended videos focuses solely on the users’ history. All of these questions help YouTube select videos that are custom chosen for the satisfaction of the user:
+
+What have they watched before?
+Do they mostly listen to music?
+Do they watch vlogs?
+What channels do they frequent?
+The second part of the algorithm focuses on the interaction between top videos and similar users (to the one you’re targeting).
+
+For example, YouTube might have a group of users that consistently listen to the same band on YouTube. From there, they’ll choose the videos that are most-watched by this similar audience and rank them highly for users. One great thing about YouTube’s home page suggestions and recommended videos is that it won’t just suggest the same videos and the same channels.
+
+The algorithm knows and understands that users are interested in more than one thing and will create suggestions based on all of their previously watched videos.
+
+Tip from YouTube on how to rank in the “Home” section
+YouTube suggests that in order to rank in the “Home” section of their platform, you should aim to keep users engaged for as long as possible. It doesn’t matter whether you post a few long videos or a ton of short ones, the goal is to keep people interested and engaged in your videos. This increases the chances that your video will be featured on the home page.
+
+Tip from YouTube on how to rank in the “Recommended” section
+In order to rank in the “Recommended” section of YouTube’s interface, they suggest that the end screen of your videos close with a strong call to action that suggests your next video.
+
+2. Trending results algorithm
+The algorithm for trending results pulls videos that are new and popular in a specific country. Trending videos are never sponsored, meaning users can’t pay to have their video shown in the trending results. Some videos on the trending list are expected.
+
+These are videos like a new song, but others can be based on things like the rate of growth in views and where views are coming from.
+
+
+
+Tip from YouTube on how to rank in the “Trending” section
+YouTube suggests that to rank in the “Trending” section, you should make videos that are widely relatable, broadly appealing, and easily shared. When you create these kinds of videos, they can reach tons of different audiences besides your subscribers.
+
+3. Search results algorithm
+Search results appear when you search for a specific term. For example, if you search “how to bake chocolate chip cookies,” the results you see are a result of the search.
+
+But how does YouTube choose what videos get those first-page spots? For search, it’s mostly based on the relevance of your video to the user’s search, as well as the keywords that you use in the title and description.
+
+When they deliver these results, they obviously want to ensure that the keyword or a variation of the keyword that the user searched is present in your video’s title and/or description. Not only that, but the algorithm also takes a look at whether the user has watched your videos before.
+
+Tip from YouTube on how to rank in the search results
+In order to rank in search results for keywords that are featured in your video, be sure to write extended descriptions for your videos that feature that keyword. Be sure to not keyword stuff, or write content that isn’t relevant to your video, though.
+
+5. Subscriptions results algorithm
+When someone subscribes to your channel, they can visit their subscriptions page and see all the newly uploaded videos from all the channels they follow.
+
+In order to rank a user’s subscribed channel results, YouTube uses view velocity, which is a number that quantifies the number of subscribers that watch your video right after it’s published. Your videos will rank higher depending on how high your view velocity is. View velocity isn’t the only part of the subscriptions ranking algorithm, though.
+
+YouTube also considers the number of followers your channel has when ranking your videos!
+
+Tip from YouTube on how to rank in the “subscriptions” results
+Be genuine when you ask for subscribers. Users have a better reaction when you explain the benefits of subscribing to your channel and how your channel supports you.
+
+
+Do you need help optimizing your videos for YouTube’s algorithm?
+WebFX is a full-service digital marketing agency that understands the importance of not only highly-ranked content, but also highly-ranked videos on platforms like YouTube. If you’re interested in optimizing your video descriptions and titles, getting more views, and creating stellar videos, we’re here for you.
+You use YouTube to watch videos, post your own content, and build up a following. That is how YouTube works for you. This article is about how YouTube works technically. There are a lot of steps which occur between you clicking 'upload' and a viewer clicking 'play'. Understanding this process can be useful to YouTubers because it can help shed light on where problems may be occurring when you have issues uploading or watching videos. Generally when there is a problem it is on your end and there are multiple simple things you can do to fix it.
+
+This article will explain what goes on behind the scenes when you upload a video, where that video really goes, and what happens when somebody clicks play.
+
+How Does YouTube Work
+1.What Happens When You Upload?
+When you upload a video your computer or device packages it into IP packets. Packets are fragments of information containing both data from your video and the address you are sending it to, in this case YouTube. The packets are encoded into radio signals which are sent through a wifi or cellular network. Your video travels through switches and routers on the internet until they reach YouTube's servers. Your video is then reassembled and stored.
+
+If uploading takes a long time for you it probably has nothing to do with YouTube; there is a lot that needs to happen for your video to even get there. How long the upload process takes depends on a number of factors including how many devices share your internet connection, how strong your wifi signal is, and the age of your router. If your uploads are taking too long consider compressing your videos before you upload them. You can also try uploading from your college campus or public libraries as institutions like these tend to have fast internet speeds.
+
+2.Where is Your Video Stored?
+how youtube works
+
+As it is owned by Google YouTube uses Google's 'Bigtable', a compressed data storage system which allows it to store the 500+ hours of video uploaded to its servers every minute. Bigtable is software, though, not hardware. YouTube and Google both have massive amounts of data and it needs to be physically housed somewhere.
+
+videos uploaded to youtube
+
+Google has Modular Data Centers all over the world where it keeps its servers. These centers could cost as much as $600 million dollars each and consume huge amounts of electricity. There are six of them in the United States, three in Europe, two in Asia, and one is South America.
+
+3.What Happens When Someone Watches Your Video?
+When a viewer clicks on your video their computer sends an encoded request through the internet to YouTube's servers. After YouTube receives the play request it chooses which format to play the video in based on the viewer's browser. Your video is again turned into packets, which are again sent as radio signals over the internet to your viewer. Your viewer's computer or device reforms the packets into your video and their browser plays it.
+
+If videos take a long time to load for you then there are a few things you can do to speed them up. First, consider changing the channel of your wifi router. Most people stay on the channel their router was set to when they first got it and so there is a good chance you and your neighbors are all on the same channel. This causes your networks to interfere with each other. You can also delete the temporary files on your computer. Besides helping you stream video faster this will free up storage space. Another thing you can do is make sure there are as few devices connected to your network as possible while you are watching videos. Besides mobile phones and laptops you may have appliances, like coffee machines and refrigerators, which are wifi enabled. Disconnect them temporarily and it will help your videos to load faster.
+
+Many video creators, whether professional YouTubers or brands on YouTube, regard the YouTube algorithm as a complete mystery—a higher power that rules over their view counts, completely outside of their control.
+
+They believe there’s no understanding how the YouTube algorithm works. It’s one of the platform’s most carefully guarded secrets, after all.
+
+Except it isn’t. 
+
+In a research paper published in 2016, a group of Google engineers shared their plans for how videos could be surfaced through YouTube’s recommendation engine for a better user experience.
+
+While it didn’t garner much attention at the time, it bears a lot of relevance to the YouTube of today since, according to YouTube’s Chief Product Officer, 70% of YouTube views now come through this recommendation engine.
+
+Much of the discussion about getting views on YouTube focuses on YouTube SEO, social media promotion, and getting subscribers. While these contribute to the discovery of your videos, alone they don't unlock the lion's share of views you stand to gain from YouTube's recommendation engine (via YouTube's homepage and “recommended for you” suggestions).
+
+If you want to get more video views in the long term, you need to understand a few things about how the YouTube algorithm works in 2019.
+
+Table of contents
+How the YouTube algorithm works
+Rethinking "clickbait" for 2019
+5 ways to get more YouTube views
+Conclusion
+How the YouTube algorithm works
+research paper detailing plans for the youtube's recommendation engine
+
+In this research paper published by Google engineers Paul Covington, Jay Adams, and Emre Sargin, they break down the signals they use to rank videos for YouTube recommendations:
+
+Click-through rate (the likelihood of someone clicking on your video after seeing it)
+Watch time (the combined amount of time that viewers spend watching your videos)
+How many videos the user has watched from your channel
+How recently the user watched a video about this topic
+What the user has searched for in the past
+The user’s previously watched videos
+The user’s demographic information and location
+The first three signals are the only ones you can influence directly. The rest depend on factors outside of your channel in order to personalize the recommendation. 
+
+These Google engineers even state that their final ranking objective is “generally a simple function of expected watch time per impression. Ranking by click-through rate often promotes deceptive videos that the user does not complete (‘clickbait’) whereas watch time better captures engagement.”
+
+Some might interpret this to mean that optimizing for click-throughs will get you penalized by YouTube, but that’s a huge misunderstanding.
+
+YouTube is only penalizing bait-and-switch tactics—overpromising before the click and delivering disappointing content after it. Click-through rate is still as important as ever. You can't generate a lot of watch time for YouTube without getting clicks first, after all. 
+
+You can even see these priorities reflected in YouTube Studios: YouTube’s new analytics dashboard.
+
+youtube studios analytics
+
+Under the Reach Viewers tab, you can see the following metrics, which together illustrate YouTube’s new emphasis on click-through rate and watch time: 
+
+Impressions: How many times your video thumbnails were shown to viewers as a recommended video, on the homepage, or in search results.
+Traffic sources for impressions: Where on YouTube your video thumbnails were shown to potential viewers.
+Impressions click-through rate (CTR): How often users watched a video after seeing your thumbnails (based on logged-in impressions).
+Views from impressions: This measures how often viewers watched your videos after seeing them on YouTube.
+Watch time from impressions: Watch time that originated from people who saw your videos and clicked them on YouTube.
+Rethinking “clickbait”: The relationship between click-through rate and watch time
+Over the past few years, you’ve likely seen articles about YouTube’s war against clickbait as the platform was flooded with misleading video thumbnails and exaggerated titles trying to game the algorithm. 
+
+As a result, the pendulum swung towards watch time as the key signal for ensuring the quality of a video. Many YouTube creators reacted by abandoning the tactics that helped them capture attention while competing against the hundreds of hours of video content uploaded every minute to YouTube.
+
+Only that didn’t work either.
+
+In a Q&A about prioritizing signals in the YouTube algorithm, one of the same Google engineers from the aforementioned paper admitted, “It’s constantly a struggle, because mostly you’re combating abuse at the same time. So if you optimize for click-through rate you get clickbait, and if you optimize for watch time, you get incredibly long videos.”
+
+If a video has a high click-through rate but generates low watch time, then it’s clickbait without a doubt. But if attention-grabbing thumbnails and titles get people to click through and watch your videos, then that’s not only fair in YouTube’s eyes—it’s ideal.
+
+And that brings us to the crux of my point: If you want to get more views through YouTube's recommendation engine, you need to optimize your channel and your videos for both click-through rate and watch time.
+
+5 ways to get more views through YouTube recommendations
+1. Stick to a consistent premise or format for your YouTube channel
+Most great YouTube channels or series can be summed up in 5 seconds:
+
+First We Feast: Celebrities and food.
+Blendtec’s Will it Blend?: Blending an object that you're not supposed to blend.
+Vox: Newsworthy topics explained in an accessible and engaging way.
+On the flipside, many YouTube channels struggle to gain traction because they treat their YouTube channel as a place to upload all their video content, rather than as a home for a consistent video series.
+
+Consistency is the foundation for success on YouTube—without it, you might be able to capture attention, but you won’t be able to keep it.
+
+YouTube channels that find their consistency are able to sustainably grow their subscriber base and viewership because it makes it easier for people to decide to watch more of their content and subscribe to their channel.
+
+The First We Feast channel embodies the kind of consistency we’re talking about—celebrities eating food—with multiple series that are essentially variations of the same premise. 
+
+first we feast youtube channel is a good example of consistency
+
+Below, you can see how this consistency feeds their subscriber growth over time. Whenever a video is lucky enough to “go viral”, it actually has a better shot at converting each fleeting viewer into a lasting subscriber because of the stickiness of the premise and the consistency they can find across the rest of the channel’s content.
+
+first we feast's subscriber growth over time on youtube
+
+If you want to deviate from your core premise, it’s best to do it on a separate YouTube channel to avoid undermining your own efforts. First We Feast, for example, is owned by Complex, which has a very different focus and audience. The channels are connected under the Featured Channels tab, but otherwise, they don’t really intersect.
+
+how first we feast separates itself from complex
+
+2. Feed the recommendation engine with other sources
+Newer YouTube channels can’t rely on the recommendation engine to drive all their views. 
+
+Recommendations, after all, are mostly based on how viewers have viewed and interacted with your videos in the past. YouTube needs data to base the recommendations on and there's no data without people watching your videos. So exercise all the usual efforts to promote your videos, such as:
+
+Sending new videos to your email list
+Partnering with the press or other influencers
+Promoting your videos on social media
+But above all, focus on YouTube SEO and getting more subscribers, not only to garner video views over the long-term but also because what a user repeatedly consumes on-platform and what a user subscribes to are key signals that the YouTube algorithm uses to make personalized recommendations.
+
+In the paper, the engineers note that “the most important signals are those that describe a user’s previous interaction with the item itself and other similar items… As an example, consider the user’s past history with the channel that uploaded the video being scored—how many videos has the user watched from this channel? When was the last time the user watched a video on this topic?” 
+
+If you can get a new user to continue watching more content after clicking through to one of your videos, you can increase the chances of your videos getting recommended to them the next time they open YouTube. 
+
+3. Create thumbnails that get clicked
+We’ve established that click-through rate is still important and that YouTube prioritizing watch time is simply a countermeasure against low-quality clickbait.
+
+So now let’s talk about the elephant in the room—improving your clickthrough rate—using two great sources of inspiration for clickable thumbnails: YouTube’s trending videos tab and Netflix.
+
+Have closeups of emotive faces or action shots
+Look around YouTube and you’ll see no shortage of highly expressive faces on video thumbnails.
+
+According to a study by Netflix about the performance of artwork on the platform, “emotions are an efficient way of conveying complex nuances. It's well known that humans are hardwired to respond to faces—we have seen this to be consistent across all mediums. But it is important to note that faces with complex emotions outperform stoic or benign expressions.”
+
+One of the earliest trends also noted by Netflix, which is worth carrying forward to your own thumbnails, is that an image’s tendency to win against others dropped when it contained more than 3 people.
+
+expressive faces in youtube thumbnails
+
+You can optimize your thumbnails for click-throughs by including one to three faces in your thumbnails wearing expressions that speak louder than words.
+
+If you don’t have emotive faces in your videos, you can also use thumbnails that convey action to elicit an emotional response, like the SlowMo Guys. 
+You might not think of YouTube as an example of social media, at first glance. You are far less likely to link up with friends, families, and even customers on LinkedIn, than you are on social networks, such as Facebook or Instagram. But at its heart, it’s a social network, where you share video with other YouTubers. And like all such platforms, YouTube uses a complex algorithm to decide the position of videos in its recommendations and lists.
+
+How the YouTube Algorithm Works:
+People Watch What YouTube Tells Them To
+YouTube’s Algorithm has Changed Over Time
+The Aim of YouTube’s Algorithm
+How the YouTube Algorithm Works
+YouTube Search Results
+Other Factors Affecting the YouTube Algorithm
+Ways to Improve the Odds of Your Video = Ranking Well with the YouTube Algorithm
+People Watch What YouTube Tells Them To
+It may surprise you to know that most viewings on YouTube occur as a result of the platform’s recommendations. Like Netflix, YouTube uses AI to determine the “best” videos for viewers (or at least the person whose account is currently logged in).
+
+YouTube Chief Product Officer Neal Mohan admitted at CES 2018 that more than 70 percent of the videos you watch on YouTube, is due to suggestions made by one of the service's AI-driven recommendations.
+
+This is particularly relevant to mobile viewers who devote more than 60 minutes to each viewing session. With such lengthy viewing sessions, YouTube’s AI gets the opportunity to place many potential videos to watch in front of the average viewer.
+
+YouTube’s Algorithm has Changed Over Time
+Before 2012, YouTube ranked its videos by view count – the more people watched a video, the more it would be presented to other viewers. The problem was that people learned to game this algorithm easily. All they had to do was to give a video a clickbait title, encouraging people to open it and watch a small portion of it. Of course, they would quickly realize that the video didn’t do what it promised, so they immediately left it and moved onto the next video in the queue. Before long people were complaining about the numerous click-bait videos.
+
+YouTube changed its algorithm in 2012, this time favoring duration – watch time – and session time (overall time spent on the platform). Before long “gamers” learned the way to beat the system was to create long, drawn-out videos, that met their basic premise, but in a waffling and padded way.
+
+The problem with needing to make longer videos, while keeping up overall session time, was that YouTubers began to burn out, with demand for tremendous amounts of content. The creators still had to make as many videos as previously, but with less time and resources per video.
+
+It was during this era that a few new genres of video became popular – they had the potential to be long videos but were easy to make. Perhaps the most noticeable of these were video gamers who began to film themselves playing. It is much easier for a gamer to shoot himself in action during a game than it is doing a stand-alone game review, requiring planning and a script, for instance.
+
+In 2016, however, YouTube added AI and machine learning to its algorithm. This has dramatically changed the types of videos it has served up to people. It has been criticized for highlighting conspiracy theories and fake news.
+
+The most recent (2019) changes to the algorithm are in response to some of the inappropriate material that people upload to the platform. YouTube recently announced that they have modified the algorithm to ban “borderline content.”
+
+The Aim of YouTube’s Algorithm
+YouTube’s engineers describe the algorithm as one of the “largest scale and most sophisticated industrial recommendation systems in existence.”
+
+
+Not all engineers are so polite about the algorithm, however. Guillaume Chaslot, a 36-year-old French computer programmer with a Ph.D. in artificial intelligence, was one of the engineers who created the algorithm. He became disillusioned during his three years working on the project. He told the Guardian, “YouTube is something that looks like reality, but it is distorted to make you spend more time online. The recommendation algorithm is not optimizing for what is truthful, or balanced, or healthy for democracy.”
+
+Chaslot added that the algorithm never stays the same. It’s continually changing, placing different weightings on different signals. The engineers were responsible for experimenting with changes to the algorithm that would increase adverting revenues and the time that people spend watching videos. According to Chaslot, “Watch time was the priority. Everything else was considered a distraction.”
+
+Ultimately, though, the system has two aims:
+
+to help viewers find the videos they want to watch
+to maximize long-term viewer engagement and satisfaction
+The algorithm affects the six places you find video recommendations on YouTube:
+
+In search results
+In the recommended streams
+On the YouTube homepage
+In trending streams
+In channel subscriptions
+In notifications
+Related Content:
+YouTube Money Calculator: Calculate How Much You Can Make
+How Much do YouTube Ads Cost? [Updated 2022 Guide]
+The 15 Best Platforms to Find YouTube Influencers in 2022
+How the YouTube Algorithm Works
+As with most AI systems, the YouTube AI is sophisticated, and YouTube has released only limited information about it. They did publish a white paper in 2016, (Deep Neural Networks for YouTube Recommendations) which clarified some of the details (and obviously people have gained some indications from ex-employees). However, most information on the algorithm is still very secret.
+
+We know from the white paper that it uses AI to track viewers’ perceived satisfaction to create an addictive, personalized stream of recommendations, i.e., it works to determine how satisfied/happy a viewer is with each video they play, and then tailor future recommendations to try and increase this level of satisfaction.
+
+There are effectively two neural networks in use. The first filters videos to decide what would make a good match for the viewer’s “Next Up “recommendations.  The second neural network gives each video a score based on a range of factors (not yet publicly known), but it appears to include an allowance for a video’s newness and the frequency of uploads on the channel that uploaded this video.
+
+The algorithm isn’t some form of movie rater. It’s not designed to determine some scale of “goodness” for videos. It’s intended to suggest videos that the particular viewer would watch. So, if somebody has demonstrated a love for B-grade movies, such as the infamous Bela Lugosi’s Plan 9 From Outer Space (deemed to be so bad that you can’t stop watching it) or the anti-drug movie Reefer Madness (so over the top that you couldn’t take a thing in it seriously), then you would find that YouTube’s algorithm would continue to recommend similar B-grade material.
+
+YouTube Search Results
+Many factors affect YouTube search results. Most of these are still unknown.
+
+However, we know that two apparent factors have an impact:
+
+How close the metadata connected to a video is to a search query term. The metadata includes things like the video’s title, description, and keywords
+How the footage has performed to date. What types of reaction have there been to the video – likes, comments, watch times, etc.
+YouTube makes it clear, though, that their algorithm confers much more than this. YouTube won’t serve you up naturally with the most watched videos on a particular topic.
+
+Other Factors Affecting the YouTube Algorithm
+According to YouTube, there is a range of different factors that have an impact on the videos that the algorithm chooses for any individual. These include:
+
+Youtube algorithm
+The type of content that a viewer regularly watches (and the types that he/she rarely watch). If somebody spends 95% of their YouTube time watching music videos, the algorithm will predominantly serve them other music videos
+The length of time that people tend to watch a particular video; do most people view it to the end, or do they drop out after only a couple of seconds
+The speed at which a video becomes popular (or not). There is probably some leeway when a video is first uploaded to give it time to gain a reputation
+How often the uploading channel creates a new video
+The session time that people spend on YouTube
+Engagement – likes, shares, dislikes, numbers of comments
+Any negative feedback
+Ways to Improve the Odds of Your Video = Ranking Well with the YouTube Algorithm
+Ranking well on YouTube, considering all of the above, can still seem like an impossible task. It’s hard to figure out where to start or how long it will take to see results. To help, we’ve compiled a list of 10 easy-to-apply tips. These will help you approach YouTube mastery with a clearer understanding of what to do, why, and how to do it for the best results.
+
+1. Improve Your Keyword Research
+Keywords research is a given for any online content marketing. On YouTube, it helps the platform identify which videos are most aligned with a user’s interests. While not the ultimate indicator of whether your videos will be successful, having the right keywords is the first step in the right direction. 
+
+Before we get into how to find keywords, let’s define what keywords on YouTube are. 
+
+What Are Keywords on YouTube?
+Keywords are any terms that appear in the titles, descriptions, or transcripts of videos. There is a difference between a keyword and a keyword phrase. A keyword is a single word, where a keyword phrase is more specific and includes several words along with the root term you’re interested in. 
+
+For example, “diet” is a keyword and can be a root term. “Best weight loss diet for 2022” is a keyword phrase. Phrases offer more targeted clicks than broader terms, helping more of the right people find and watch your stuff.
+
+How do you identify the right keywords? 
+There are various methods (paid and free) you can use. Here are 3 great free options to work with:
+
+1. YouTube’s search bar
+
+YouTube’s search bar
+Head to YouTube’s search bar and enter a term you’re interested in. YouTube will present a list of terms that people are searching for using its autocomplete feature. These terms are all related to your root term, and can also be used as ideas for future videos.
+
+2. View Page Source
+
+This method may seem a little technical but it’s super simple. On your desktop computer, load a video that’s using a term or terms you’re interested in ranking for. Next, right-click on the page and click on view source. This will show the HTML code of the YouTube page. On a Windows computer, use the Control + F keys, or the Command + F keys on a Mac. Enter the word “keywords” and hit the enter key. You’ll see all the terms a video is using to rank on YouTube. 
+
+View Page Source
+3. TubeBuddy
+
+TubeBuddy is a browser extension that helps you optimize YouTube videos. It offers free and paid plans. The great news is that while the free plan offers limited information, you don’t need to spend money to find keywords people are using in search.
+
+TubeBuddy’s free plan will show:
+
+An Overall Score which appears in two formats. The first tab will show a Weighted score in the second Unweighted. Weighted scores account for your channel and videos, and how they compare to other content on YouTube. Free plans only show an Unweighted score and this accounts for general information on a term and has nothing to do with your content. It Is a rate out of a hundred. The higher the rating, the more likely it is that the term you’re interested in has a healthy amount of searches and not too much competition. 
+Score Analysis is a look at the search volume, competition, optimization strength, videos that rank for the term, and the number of monthly searches the term receives.
+TubeBuddy’s free plan
+What you want to pay attention to is the number of searches a video gets. In our example, "diet" receives an estimated 2.6 million monthly searches. While a broad keyword, you can tell that tons of people are diet conscious. It's also worth knowing that while you can use YouTube’s search bar, it doesn’t show an estimate of search volume, and that makes TubeBuddy more appealing.
+
+With an understanding of how in-demand a keyword or keyword phrase is, you’re on your way to producing optimized content. You’ll be able to create videos and use terms to optimize titles, descriptions, and even include them in your script to help rank your videos higher on YouTube. 
+
+If you’re interested in more tools, two worth checking out are Semrush’s Keyword Tool and Keyword Tool Dominator.
+
+2. Optimize Video Titles
+With a good idea of the words to use, it’s time to think about how to use them to create titles that attract clicks. Seasoned copywriters know that the most effective titles contain four key elements. You don’t need to apply all four to produce winning and clickable titles, but you must have at least three. And when you use at least three of the four elements along with your keyword term/phrase, you’ll have a powerful and attractive title that pulls viewers in. Here are the four elements effective titles include: 
+
+Urgency
+A sense of urgency acts as a trigger for a deep-seated psychological need. That need is to not miss out. FOMO is real, and when you stress the importance of action right now viewers will want to take action RIGHT NOW.
+
+Fred Lam uses the word “Now” alongside the words “To Make Money” to capture attention in search.
+
+effective titles
+Source: youtube.com
+
+Useful
+“What’s in it for me?” is a phrase smart creators ask themselves when developing new ideas. It’s not about what the creator stands to gain but more about your audience. What value will they receive by choosing to watch your video? When you create titles that communicate clear value, they set off light bulbs in the minds of your viewers. Viewers automatically appreciate that their clicks aren’t going to result in a waste of time or being fed useless information.  
+
+Our video on setting up a TikTok account is practical and the title says it all. 
+
+effective titles
+Unique
+Uniqueness is all about originality. That may sound hard to accomplish today with as many channels as there are on YouTube, but it is still possible and easier than you think. To produce unique titles, think about your personal approach and what makes your brand special. You may be one of 1000 creators in the cosmetics and beauty industry, but a simple distinction can make you stand out. You could carve out a niche that’s all about creating videos on how to apply makeup in under 3 minutes. You could also create different looks, and these distinctions make your channel and content unique. All you need do is highlight that uniqueness in your title. 
+
+Learn With Seb is a channel dedicated to no-nonsense tutorials on creating online content. This title is unique because it includes the number 22 -- and that many creators may not have realized Canva had that many useful tips and tricks -- and, because of the use of capital letters that stand out.
+
+produce unique titles
+Source: youtube.com
+
+Ultra-Specific
+Specificity is a powerful tool for addressing your audience’s needs. It helps people zero in on the results they are after. And when you consider how many competitor channels there are on YouTube, seeing a video with a specific title that speaks to a viewer is more likely to get the all-important click. You can incorporate specificity by mentioning details, and preferably topics covered in your videos. 
+
+Unbox Warehouse is specific by calling out the product by brand and model name.
+
+Specificity is a powerful tool
+Source: youtube.com
+
+Pro Tip: Make Your Thumbnails and Titles Play Off of Each Other
+
+Thumbnails are the first visual experience of your videos for viewers. They have the power to attract clicks if designed correctly. One tip you’ll learn more about below is to include text in your thumbnails. When you do, ensure that it entices your viewers, creating a little curiosity about the content of your video. If you can pull this off, your titles and thumbnails will be hard to miss. 
+
+To make our thumbnail for our video about Linktree pop, we added text to it. Note how we didn’t give away the goods, but still created intrigue for anyone considering the tool.
+
+Thumbnails and Titles
+3. Create Compelling Descriptions
+YouTube video descriptions are write-ups about the content of your videos. They include key information that helps viewers understand what your videos are about, making it easier for them to choose whether to watch your videos. 
+
+Creating descriptions isn’t hard, just share what your video includes. There’s a lot of information about what makes for a good description today, and to extract out what really matters, we’ll return to our important question, “what’s in it for me?” If you were looking for a video on a specific topic and chose to read a description, what would you want to know about the video?
+
+See how easy that was?
+
+Here’s a look at a description we created for a video on the best social media scheduling tools. It’s comprehensive because the topic is broad. To help viewers find what they need, we also included timestamps for quick reference and listed the tools covered in the video. 
+
+YouTube video descriptions
+4. Transcribe Your Videos
+When you transcribe a video, all words spoken are converted into text. This may sound like overkill, but it’s a smart way to get into YouTube’s good books. YouTube has long been rumored to be able to use audio as a means for assigning rankings. In fact, whenever you upload a video, YouTube has an auto-transcribe feature. While it doesn’t do a perfect job, it’s still helpful (more on this below). 
+
+Why should you create a transcript or subtitles for your videos? First, it makes the YouTube experience more accessible for the auditory impaired. Secondly, research has shown that as much as  69% of people watch videos without sound. This means that not including polished closed captions could make your videos less than desirable, and lose you more viewers over time.
+
+How do you transcribe your videos? 
+There are two ways to add transcriptions/subtitles/captions to your videos. 
+
+When Uploading a Video
+
+Look for the Add Subtitles section and click on the Add button. This approach involves more work than the second because you’re going to have to type up every word included in your video. If you have time, go for it. If not, check out option 2. 
+
+section Add Subtitles
+Once Your Video is Uploaded
+
+YouTube usually automatically converts your audio into text. To see your transcripts, go to the Subtitles tab (left-hand menu in YouTube’s Creator Studio), or by accessing subtitles from a specific video. 
+
+YouTube’s auto-transcribe feature can take up to 12 hours to create subtitles for a new video, so be sure to check for yours about a day after upload. If your video automatically received subtitles, you’ll have the option to edit your subtitles by clicking on Duplicate and Edit. If you don’t see the Duplicate and Edit option, click on Add under the Subtitles column. 
+
+"Duplicate and Edit" option
+You’ll be able to choose the language your video is in and then add subtitles and proceed to edit them. 
+
+choose the language
+All of this is possible in Creator Studio, and if you want, you can download your transcript file and repurpose it for other content you can create.  
+
+open transcript
+5. Create Custom Thumbnails
+Custom thumbnails offer a more unique experience for your audience and they are easy to create. But don’t just screenshot any part of your video and slap some text on an image. That won’t look interesting or drive as much engagement as possible. Instead, follow these 5 steps to produce captivating thumbnails.
+
+1. Capture an Action-Driven Still Image From Your Video
+Use a screenshot that alludes to action. This way, your audience will want to find out what your video is all about and what happens next. 
+
+Jason Swenk chose this thumbnail to illustrate action. It shows Jason explaining how to grow your agency.
+
+Capture an Action-Driven Still Image From Your Video
+Source: youtube.com
+
+2. Use a Human Face Expressing Emotion
+Emotion is infectious and to attract viewers, you need to include some in your video thumbnails. Creating thumbnails that show emotion isn’t just a “good idea”, research shows that emotions like sadness and anger drew over 3 million views, where joy and humor were responsible for 1.5 million views.
+
+PewDiePie is no stranger to theatrics and this thumbnail and view count show just how effective emotions can be. 
+
+Use a Human Face Expressing Emotion
+Source: youtube.com
+
+3. Pique Curiosity
+Curiosity is an almost magical emotion and you can stir it in the minds of your viewers with the right thumbnail design. How? Leave a little room for imagination. Blur or black-out an object in your thumbnail, use text with ellipses, ask an open question, or use an image where the subject is looking beyond the frame at something surprising. 
+
+Joe Rogen focusing on something outside of the frame of the image is enough to make viewers want to know more.
+
+Pique Curiosity
+Source: youtube.com
+
+4. Add Color Contrast
+YouTube’s colors are white, gray, and black, and that makes standing out really easy. But you’ve got to be smart about the colors you use. They have to agree with each other. For the uninitiated, the best tool for the job is a basic color wheel. 
+
+Color Contrast
+Source: hgtv.com
+
+What is the color wheel? It’s a circle that includes various colors and illustrates the relationship between them. To find complementary colors, combine colors close to each other on the wheel. For stronger contrasts, pair colors on opposite ends of the color wheel. 
+
+DISTRIBUTED SYSTEMS
+YouTube Architecture – How Does It Serve High-Quality Videos With Low Latency
+ Shivang  7 min read
+Earlier I wrote an article on how YouTube stores petabyte-scale data every single day. How does it store so many videos without running out of storage space? This write-up is an insight into the video processing & delivery architecture of YouTube. How does it serve high-quality videos with low latency?
+
+So, without further ado. Let’s get on with it.
+
+For a full list of articles on real world architectures on this blog here you go.
+
+Below is the diagram for the high-level backend architecture of the video-sharing platform for reference. I’ve discussed it in the YouTube data storage article, I’ve linked above.
+
+YouTube architecture
+
+
+Video Transcoding
+A key element in the process of storage and delivery of high-quality videos on YouTube is video transcoding. When a video is uploaded on Youtube it’s first transcoded from its original format to a temporary intermediate format to facilitate the conversion of the content in different resolutions & formats. More on this later, before that let’s have an insight into what video transcoding is?
+
+Video transcoding is a technique of converting a video into multiple different formats and resolutions to make it playable across different devices and bandwidths. The technique is also known as video encoding. This enables YouTube to stream videos in different resolutions such as 144p, 240p, 360p, 480p, 720p, 1080p & 4K.
+
+Adaptive Streaming
+Delivery of content based on the network bandwidth and the device type of the end-user is known as adaptive streaming. Over the years YouTube has excelled at this. The idea is to reduce the buffering as much as possible.  
+
+Imagine streaming a 4K video at only its original resolution, providing no lower resolutions. Without adaptive streaming, there is no way viewers with low bandwidth network can watch that 4K stream. This is definitely not an end-user experience anyone would want on a platform. Isn’t it?
+
+You can read more on transcoding here & adaptive bitrate streaming here.
+
+Codecs
+Large video files are compressed into smaller size with the help of codecs. Codecs contain efficient algorithms that compress a video into smaller sizes. One of the most common widely used video codecs used today is H264. According to Wikipedia, this codec is the video compression standard and is used by over 91% of the video industry developers.
+
+Lossless & Lossy Transcoding
+Transcoding is possible in two ways lossless and lossy. You may have heard of these terms associated with data/image compression. Lossless means during transcoding from the original format to a new format, there is no loss of data. This means the new format video will also be, mostly, of the same size as the original video since there is no loss of data.
+
+In the Lossy approach, some data is dropped from the original video in order to reduce the size of the new format. Lost data cannot be regained. It’s gone forever. You’ve might have experienced this when you upload a high-resolution DSLR camera image on a social network and after the upload, the image doesn’t look as good and detailed as the original image.
+
+This is for one simple reason; the platform compressed the image losing some data from it in order to reduce it in size so that your connections can easily view it without experiencing any sort of download latency. Even videos are a series of still image frames. When you render an animation video the animation software generates the animation in frames and then we add all the frames together to create the final video.
+
+
+
+Recommended Read: Best handpicked resources to build a solid foundation in software architecture & system design
+
+Software architecture system design learning track
+
+
+Costs Associated With Video Transcoding
+When a video is converted into multiple formats and resolutions, all the different versions need to be separately stored in the database. This has storage costs. Also, sophisticated codec algorithms that convert these videos into different resolutions have high computational costs. And then switching between different resolutions based on the client’s network bandwidth in real-time has network delivery costs. YouTube’s video encoding pipeline keeps a balance between the three factors. Additional efforts for further compressing the videos are made by the platform only for the highly popular videos.
+
+Okay, let’s move on the video upload and rendering flow.
+
+To educate yourself on software architecture from the right resources, to master the art of designing large scale distributed systems that would scale to millions of users, to understand what tech companies are really looking for in a candidate during their system design interviews. Read my blog post on master system design for your interviews or web startup.
+
+
+
+YouTube’s Video Delivery Architecture
+All the videos that are uploaded to YouTube are first transcoded into multiple different formats and resolutions set by the platform. The video during the transcoding process is broken down into segments and converted into multiple different resolutions. The processing of multiple segments is spread across multiple machines to parallelize the process thus increasing the throughput. If a video goes viral, it is subject to another round of video compression. This second round of compression ensures the same visual quality of the video at a much smaller size.
+
+When encoding videos YouTube chooses a bitrate within the limits that the codec allows. A video with a high bitrate has better quality but there is a sweet spot beyond which even on increasing the bitrate there is not a significant visual improvement in the video quality though the video size increases in the process.
+
+YouTube also takes into account the playback statistics of the video player on the client’s device like how often the player switches to a lower resolution with respect to the steaming bandwidth available on the client & so on. It then predicts if a better resolution content can be pushed to the user, being aware of his streaming bandwidth limit. This performance estimation enabled YouTube to cut down on the bandwidth, increasing user engagement on the platform simultaneously. More on this here & here.
+
+For encoding it’s videos YouTube uses VP9 – an open-source codec that compresses videos with HD & 4K quality at half the bandwidth used by other codes.
+
+Once the videos are transcoded and stored in the database, they are spread across the cache network of the platform. When the user requests a video, the platform checks the viewer’s device type, screen size, processing capability, the network bandwidth and then delivers the fitting video version in real-time from the nearest Edge location.
+
+Youtube video delivery architecture
+When the video is streamed LIVE, it’s not really LIVE. There is a slight processing delay required by the transcoding and other processes involved in the video delivery. Also, it’s tricky to cache LIVE videos across the network since it’s being streamed LIVE. I’ll discuss that in my next write-up in the architecture series.
+Yellow and blue are great contrasting colors and Growth Tribes used them along with black to stand out.
+
+color combination
+Source: youtube.com
+
+5. Brand Your Videos
+Branding is a quintessential practice in the marketing world. The right branding helps cultivate much-needed recognition for your channel and from your audience -- something that can turn more first-time viewers into subscribers and regulars. 
+
+To build your brand’s recognition, include your logo on your thumbnail. There is no hard and fast rule about where it must appear, just as long as it is evident. That said, make it less of the star and more of a supporting act. People aren’t scrolling through YouTube to see your logo, they want interesting videos. 
+
+Brand Your Videos
+Source: youtube.com
+
+If you’re looking for a tool to create awesome thumbnails with, we recommend Canva. Here’s a helpful tutorial from Podia:
+
+
+6. Use Pattern Interrupts
+If you find that fewer people watch more of your videos, you have a watch time issue. And that’s a big deal. Watch time is one of the more weighted metrics YouTube uses to rank content. To improve your video watch time, you have to make your videos more appealing not just at the start but throughout. 
+
+Pattern interrupts are the perfect solution. A pattern interrupt is a new idea that, when introduced, surprises your audience. It makes them stop in their tracks and pay attention to understand what they are watching. 
+
+Pattern interrupts are part of the neurolinguistic programming field of study. They’re so effective because they appeal to how the human mind works. When we’re faced with new and surprising information, our minds can’t help but try to make sense of it. And they have been proven wildly successful. When Buffer wanted to grow their YouTube presence, it used pattern interrupts and saw 61% growth in just 30 days.
+
+While pattern interrupts may sound hard to implement in your videos, they're not. They can take many forms. For example, you could interrupt a viewer’s thought pattern by introducing a graphic to your video to better explain a concept, or adding B-roll footage. Another easy application is by transitioning from a full shot to a close-up shot. This shift forces viewers to adjust their focus, making them “reset” their minds and stay tuned in. 
+
+Marques uses a very quick yet effective pattern interrupt. In all of a second, he switches between a full shot and b-roll to keep viewers glued to their screens.
+
+7. Include Calls to Action
+Calls to action are a basic but often overlooked component for all forms of content. They help generate results by getting viewers to take action. Calls to action are inserted at the end of your videos and can be used in different ways. 
+
+For example, if you’re trying to grow your channel, you need more subscribers and video views. At the end of each video, ask people to like, share, and subscribe. You can also reference other related or worthwhile videos you’ve produced for people to watch. While simple, these asks can help you gain the traction you need on YouTube. And when more people watch more of your content, YouTube’s algorithm is more likely to rank more of your videos.
+
+Notice how Nate points to a relevant video at the end of his. Easy stuff.
+
+8. Promote, Promote, Promote
+Promotion isn’t a practice many YouTubers subscribe to, and regrettably, it’s also a reason why much of their work goes unnoticed. Promotion is vital. When you think about your creation cycle and how much effort you put into producing a video, wouldn’t you want to give your hard work the best chance at reaching the widest possible audience?
+
+Getting more eyes to your videos is a matter of sharing them with as many people as possible. Here are 3 ways to get that done:
+
+Getting more eyes to your videos
+Cross-pollinate on social media: Share your videos on all your social accounts. From Facebook, Instagram, and TikTok Stories, to in-feed posts, and be sure to add a URL to your bio or link-in bio app.
+Email subscribers: If you have a mailing list, and we hope you do, use it to share new videos every time you publish one. Just sending an email with a link helps keep your list engaged and drives traffic you would otherwise have missed out on. Also, while you’re at it, ask your subscribers to like and share your new video. It’s a simple ask but it makes a world of difference.
+Add videos to your website: Adding your videos to your site gives you a better chance of driving more traffic to your channel. Add them as blog posts where you create a short write-up or summary, or include them in other blog posts where you cover a topic that your video is about. 
+9. Engage Your Audience
+You may have started your YouTube channel for a variety of reasons, but it’s more of a brand and business than you think. YouTube is a publishing platform. When people tune into your videos, you replace television or any other competing form of entertainment or edutainment. And as a brand and business, you have to think about longevity. For your channel to thrive, you have to embrace your audience. You must engage them. 
+
+Engaging your audience establishes a personal connection between them and you. You form relationships and accessibility adds a special dimension to your brand, making it more real and appealing. And when people find something appealing, they are more likely to return for more of it.
+
+How should you engage with your audience? Ask and answer questions and comment on comments. Make no mistake. This is work. Here are 3 quick tips on how to make it easy to manage engagement:
+
+quick tips on how to make it easy to manage engagement
+Dedicate time over the first three days after a new video is published to go through comments. After that, check comments once every 2 to 3 days.
+Answer all questions. Be sure to reply to all questions. These are people reaching out for help. If you ignore them, they will ignore your future work, and that’s not going to help your case for YouTube dominance.
+Always keep it positive. Trolls and haters are everywhere, but when they show up, don’t let them ruin your mood. A smart way to deal with online hate is to expect it. Not everyone is going to love your stuff. You’ll also often find that people will rally to protect you and your brand when trolls try and cause upset. And if you want to, you can ban trolls from your channel. 
+10. Pay Attention to Your Analytics
+YouTube analytics are a gold mine of information. There are tons of indicators that fall under four main categories. These are Reach, Engagement, Audience, and Revenue. Together, they give you a closer look at your video performance and can show where you need to dedicate more time to improve your content and results. 
+
+If you want to know more about each indicator, read this article on YouTube analytics basics. It is packed with tons of value.
+
+Dominate YouTube
+There’s a lot to absorb in this blog post, and we’ll be the first to admit that it’s enough to almost put you off the idea of building a YouTube channel. But it is possible to create a wildly successful brand on YouTube, so don’t shy away from the challenge. If we had to sum up all of this great advice into a few impactful words, we’ll leave you with a simple guiding principle that when applied to each video you create, will make it easier to produce amazing content. Here it is… deliver value to your audience and you will prosper.2012 OPTIMIZING FOR WATCH TIMEIN 2012 YOUTUBE ADJUSTED ITS RECOMMENDATION SYSTEM TO SUPPORT TIME SPENT WATCHING EACH VIDEO AS WELL AS TIME SPENT ON THE PLATFORM OVERALL WHEN PEOPLE FIND VIDEOS VALUABLE AND INTERESTING OR SO THE THEORY GOES THEY WATCH THEM FOR LONGER PERHAPS EVEN TO THE ENDTHIS LED SOME CREATORS TO TRY TO MAKE THEIR VIDEOS SHORTER IN ORDER TO MAKE IT MORE LIKELY VIEWERS WOULD WATCH TO COMPLETION WHEREAS OTHERS MADE THEIR VIDEOS LONGER IN ORDER TO INCREASE WATCH TIME OVERALL YOUTUBE DIDNT ENDORSE EITHER OF THESE TACTICS AND MAINTAINED THE PARTY LINE MAKE VIDEOS YOUR AUDIENCE WANTS TO WATCH AND THE ALGORITHM WILL REWARD YOUTHAT SAID AS ANYONE WHO HAS EVER SPENT ANY TIME ON THE INTERNET KNOWS TIME SPENT IS NOT NECESSARILY EQUIVALENT TO QUALITY TIME SPENT YOUTUBE CHANGED TACK AGAIN20152016 OPTIMIZING FOR SATISFACTIONIN 2015 YOUTUBE BEGAN MEASURING VIEWER SATISFACTION DIRECTLY WITH USER SURVEYS AS WELL AS PRIORITIZING DIRECT RESPONSE METRICS LIKE SHARES LIKES AND DISLIKES AND OF COURSE THE ESPECIALLY BRUTAL NOT INTERESTED BUTTONIN 2016 YOUTUBE RELEASED A WHITEPAPER DESCRIBING SOME OF THE INNER WORKINGS OF ITS AI DEEP NEURAL NETWORKS FOR YOUTUBE RECOMMENDATIONSYOUTUBE RECOMMENDATION SYSTEM ARCHITECTURESOURCE DEEP NEURAL NETWORKS FOR YOUTUBE RECOMMENDATIONSIN SHORT THE ALGORITHM HAD GOTTEN WAY MORE PERSONAL THE GOAL WAS TO FIND THE VIDEO EACH PARTICULAR VIEWER WANTS TO WATCH NOT JUST THE VIDEO THAT LOTS OF OTHER PEOPLE HAVE PERHAPS WATCHED IN THE PASTAS A RESULT IN 2018 YOUTUBES CHIEF PRODUCT OFFICER MENTIONED ON A PANEL THAT 70 OF WATCH TIME ON YOUTUBE IS SPENT WATCHING VIDEOS THE ALGORITHM RECOMMENDS2016PRESENT DANGEROUS CONTENT DEMONETIZATION AND BRAND SAFETYOVER THE YEARS YOUTUBES SIZE AND POPULARITY HAS RESULTED IN AN INCREASING NUMBER OF CONTENT MODERATION ISSUES AND WHAT THE ALGORITHM RECOMMENDS HAS BECOME A SERIOUS TOPIC NOT JUST FOR CREATORS AND ADVERTISERS BUT IN THE NEWS AND GOVERNMENTYOUTUBE HAS SAID IT IS SERIOUS ABOUT ITS RESPONSIBILITY TO SUPPORT A DIVERSE RANGE OF OPINIONS WHILE REDUCING THE SPREAD OF HARMFUL MISINFORMATION ALGORITHM CHANGES ENACTED IN EARLY 2019 FOR EXAMPLE HAVE REDUCED CONSUMPTION OF BORDERLINE CONTENT BY 70 YOUTUBE DEFINES BORDERLINE CONTENT AS CONTENT THAT DOESNT QUITE VIOLATE COMMUNITY GUIDELINES BUT IS HARMFUL OR MISLEADING VIOLATIVE CONTENT ON THE OTHER HAND IS IMMEDIATELY REMOVED2012 OPTIMIZING FOR WATCH TIMEIN 2012 YOUTUBE ADJUSTED ITS RECOMMENDATION SYSTEM TO SUPPORT TIME SPENT WATCHING EACH VIDEO AS WELL AS TIME SPENT ON THE PLATFORM OVERALL WHEN PEOPLE FIND VIDEOS VALUABLE AND INTERESTING OR SO THE THEORY GOES THEY WATCH THEM FOR LONGER PERHAPS EVEN TO THE ENDTHIS LED SOME CREATORS TO TRY TO MAKE THEIR VIDEOS SHORTER IN ORDER TO MAKE IT MORE LIKELY VIEWERS WOULD WATCH TO COMPLETION WHEREAS OTHERS MADE THEIR VIDEOS LONGER IN ORDER TO INCREASE WATCH TIME OVERALL YOUTUBE DIDNT ENDORSE EITHER OF THESE TACTICS AND MAINTAINED THE PARTY LINE MAKE VIDEOS YOUR AUDIENCE WANTS TO WATCH AND THE ALGORITHM WILL REWARD YOUTHAT SAID AS ANYONE WHO HAS EVER SPENT ANY TIME ON THE INTERNET KNOWS TIME SPENT IS NOT NECESSARILY EQUIVALENT TO QUALITY TIME SPENT YOUTUBE CHANGED TACK AGAIN20152016 OPTIMIZING FOR SATISFACTIONIN 2015 YOUTUBE BEGAN MEASURING VIEWER SATISFACTION DIRECTLY WITH USER SURVEYS AS WELL AS PRIORITIZING DIRECT RESPONSE METRICS LIKE SHARES LIKES AND DISLIKES AND OF COURSE THE ESPECIALLY BRUTAL NOT INTERESTED BUTTONIN 2016 YOUTUBE RELEASED A WHITEPAPER DESCRIBING SOME OF THE INNER WORKINGS OF ITS AI DEEP NEURAL NETWORKS FOR YOUTUBE RECOMMENDATIONSYOUTUBE RECOMMENDATION SYSTEM ARCHITECTURESOURCE DEEP NEURAL NETWORKS FOR YOUTUBE RECOMMENDATIONSIN SHORT THE ALGORITHM HAD GOTTEN WAY MORE PERSONAL THE GOAL WAS TO FIND THE VIDEO EACH PARTICULAR VIEWER WANTS TO WATCH NOT JUST THE VIDEO THAT LOTS OF OTHER PEOPLE HAVE PERHAPS WATCHED IN THE PASTAS A RESULT IN 2018 YOUTUBES CHIEF PRODUCT OFFICER MENTIONED ON A PANEL THAT 70 OF WATCH TIME ON YOUTUBE IS SPENT WATCHING VIDEOS THE ALGORITHM RECOMMENDS2016PRESENT DANGEROUS CONTENT DEMONETIZATION AND BRAND SAFETYOVER THE YEARS YOUTUBES SIZE AND POPULARITY HAS RESULTED IN AN INCREASING NUMBER OF CONTENT MODERATION ISSUES AND WHAT THE ALGORITHM RECOMMENDS HAS BECOME A SERIOUS TOPIC NOT JUST FOR CREATORS AND ADVERTISERS BUT IN THE NEWS AND GOVERNMENTYOUTUBE HAS SAID IT IS SERIOUS ABOUT ITS RESPONSIBILITY TO SUPPORT A DIVERSE RANGE OF OPINIONS WHILE REDUCING THE SPREAD OF HARMFUL MISINFORMATION ALGORITHM CHANGES ENACTED IN EARLY 2019 FOR EXAMPLE HAVE REDUCED CONSUMPTION OF BORDERLINE CONTENT BY 70 YOUTUBE DEFINES BORDERLINE CONTENT AS CONTENT THAT DOESNT QUITE VIOLATE COMMUNITY GUIDELINES BUT IS HARMFUL OR MISLEADING VIOLATIVE CONTENT ON THE OTHER HAND IS IMMEDIATELY REMOVED

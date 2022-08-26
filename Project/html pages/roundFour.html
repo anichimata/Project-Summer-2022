@@ -39,28 +39,30 @@ console.log("Your answers have been recorded.");
  var answers = "";
 
 for(i = 18; i <= 20; i++) {	
-answers=answers+'@@'+document.getElementById(i).value;	
+var eachanswer=document.getElementById(i).value;
+console.log(eachanswer);
+eachanswer=eachanswer.replace(/[^0-9a-zA-Z ]/gi, '');
+console.log(eachanswer);
+answers=answers+'@@'+eachanswer;	
 console.log(answers);
 }
 
 var rawFile = new XMLHttpRequest();
-var params="pAnswers="+answers;
-rawFile.open("POST", "http://localhost:8080/submitAnswers?pPage=4&pAnswers="+answers);
+
+rawFile.open("POST", "http://localhost:8080/submitDesign");
+rawFile.setRequestHeader("Accept", "application/json");rawFile.setRequestHeader("Content-Type", "application/json");
 	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
 	rawFile.responseType = 'json'    ;
-
-rawFile.send();
+console.log(answers);
+let data='{"pPage":"4","pAnswers": "'+answers+'"}';
+rawFile.send(data);
 
 rawFile.onload = function(){
 
 	var didDudePass = rawFile.response;
-if(didDudePass){
-console.log(didDudePass);
-window.location = "file:///Users/ani/Documents/Project/html%20pages/trial.html";
-}
-else {
-window.location = "file:///Users/ani/Documents/Project/html%20pages/fail.html";
-}
+
+window.location = "file:///Users/ani/Documents/Project/html%20pages/final.html";
+
 console.log(didDudePass);
 };
 

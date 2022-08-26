@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>SUCCESS</title>
+<title>System Design Round</title>
 <body style = "background-color: #d3f2da;">
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,74 +17,61 @@
       <a class="navbar-brand" href="#">Interview</a>
     </div>
     <ul class="nav navbar-nav">
-
+      
       <li><a href="#">Round One</a></li>
-      <li class="active" ><a href="#">Round Two</a></li>
+      <li><a href="#">Round Two</a></li>
       <li><a href="#">Round Three</a></li>
-      <li><a href="#">Round Four</a></li>
+<li class="active" ><a href="#">Round Four</a></li>
     </ul>
   </div>
 </nav>
 
 <script type ="text/javascript">
 
+
 function preventBack() { window.history.forward(); }  
 setTimeout("preventBack()", 0);  
 window.onunload = function () { null };  
+
 
 function submit() {
 console.log("Your answers have been recorded.");
  var answers = "";
 
-for(i = 7; i <= 11; i++) {	
-var objectId=document.getElementsByName(i)[0].id;
-console.log(objectId);
-if(objectId.includes("-")){
-
- var length=document.getElementsByName(i).length; 
-for(j=0;j<length;j++){
- var element=document.getElementsByName(i)[j];
-console.log(element);
-if(element.checked){
-answers=answers+'@@'+element.value;
+for(i = 18; i <= 20; i++) {	
+answers=answers+'@@'+document.getElementById(i).value;	
+console.log(answers);
 }
-}
-}else{
-	answers=answers+'@@'+document.getElementsByName(i)[0].value;
-}
-	
-	}
 
 var rawFile = new XMLHttpRequest();
 var params="pAnswers="+answers;
-rawFile.open("POST", "http://localhost:8080/submitAnswers?pPage=1&pAnswers="+answers);
+rawFile.open("POST", "http://localhost:8080/submitDesign");
+rawFile.setRequestHeader("Accept", "application/json");rawFile.setRequestHeader("Content-Type", "application/json");
 	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
 	rawFile.responseType = 'json'    ;
-
-rawFile.send();
+let data = '{ "pAnswers": '+answers+',"pPage":4}';
+rawFile.send(data);
 
 rawFile.onload = function(){
 
 	var didDudePass = rawFile.response;
 if(didDudePass){
 console.log(didDudePass);
-window.location = "file:///Users/ani/Documents/Project/html%20pages/roundThree.html";
+window.location = "file:///Users/ani/Documents/Project/html%20pages/final.html";
 }
 else {
 window.location = "file:///Users/ani/Documents/Project/html%20pages/fail.html";
 }
 console.log(didDudePass);
 };
-
-
 console.log(answers);
 }
 
 function readTextFile() {
     var rawFile = new XMLHttpRequest();
-rawFile.open("GET", "http://localhost:8080/mediumQuestions");
+    rawFile.open("GET", "http://localhost:8080/freeResponse");
 	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
-	rawFile.responseType = 'json'    ;
+	rawFile.responseType = 'json';
 
 	rawFile.onload = function(){
 
@@ -110,7 +97,6 @@ rawFile.open("GET", "http://localhost:8080/mediumQuestions");
 			var input = document.createElement("input");
 			input.type = my_q_name;
 			input.id = my_q_id;
-			input.name=my_q_id;
 			each_q_div.appendChild(input);
 			// line break
 			each_q_div.appendChild(document.createElement("br"));
@@ -124,11 +110,11 @@ rawFile.open("GET", "http://localhost:8080/mediumQuestions");
 				const input_label = document.createTextNode(my_questions_json[i].options[j]);
 
 				input.setAttribute('type', 'radio');
-				input.value= my_questions_json[i].options[j];
+				input.setAttribute('name', 'o' + my_q_id);
 
 				input.id=my_q_id+"-"+j;
 				input.label=my_questions_json[i].options[j];
-				input.name=my_q_id;
+				input.name='o'+my_q_id;
 				each_q_div.appendChild(input_label);
 				each_q_div.appendChild(input);	
 			    each_q_div.appendChild(document.createElement("br"));
@@ -136,8 +122,20 @@ rawFile.open("GET", "http://localhost:8080/mediumQuestions");
 			}
 			question_form.appendChild(each_q_div);
 		}
-							each_q_div.appendChild(document.createElement("br"));
-              
+		if(my_q_type=='textarea'){				
+			var input = document.createElement("textarea");
+			input.type = my_q_name;
+			input.id = my_q_id;
+			input.setAttribute('rows', '20');
+			input.setAttribute('cols', '80');
+
+			each_q_div.appendChild(input);
+			// line break
+			each_q_div.appendChild(document.createElement("br"));
+			question_form.appendChild(each_q_div);
+		}
+		
+              each_q_div.appendChild(document.createElement("br"));
     }
 };
     rawFile.send();
@@ -148,10 +146,9 @@ rawFile.open("GET", "http://localhost:8080/mediumQuestions");
 
 //usage:
 readTextFile();
-
 </script>
 <div class="container-fluid">
-<h1>DONE!</h1>
+<h1>Welcome to the System Design round of the Interview</h1>
 <div>
 <br>
 </div>

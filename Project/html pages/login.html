@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type ="text/javascript">
+
+function preventBack() { window.history.forward(); }  
+setTimeout("preventBack()", 0);  
+window.onunload = function () { null };  
+function setUser() {
+	var user = document.getElementById('fname').value;
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("POST", "http://localhost:8080/setUser?username="+user);
+
+	rawFile.setRequestHeader("Access-Control-Allow-Origin", "localhost");
+	rawFile.responseType = 'json';
+console.log(user);
+rawFile.send();
+rawFile.onload = function(){
+window.location = "file:///Users/ani/Documents/Project/html%20pages/roundOne.html";
+}
+}
+</script>
+
+<h1>Welcome to the Interview!<h1>
+<h3>Please give us a username and begin!</h3>
+<br>
+
+<form>
+  <label for="fname">Username:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+
+  <button type="submit" form="form1" value="Submit" onclick="setUser()">Submit</button>
+</form>
+
+<p>Click the "Submit" button to proceed to the first round.</p>
+
+</body>
+</html>
